@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="~/css/create-user.css" />
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<main>
+    <form action="" method="post" class="register-form">
+        <h1>Cadastro de Usuário</h1>
+        
+        <section class="register-section">
+            <h2 class="register-section-h2">Nome:</h2>
+            <input type="text" class="register-section-input" placeholder="Digite seu nome">
+        </section>
+
+        <section class="register-section">
+            <h2 class="register-section-h2">Email:</h2>
+            <input type="text" class="register-section-input" placeholder="Digite seu e-mail">
+        </section>
+        
+        <section class="register-section">
+            <h2 class="register-section-h2">Senha:</h2>
+            <input type="password" class="register-section-input" placeholder="Digite sua senha">
+        </section>
+        
+        <section class="register-section">
+            <h2 class="register-section-h2">Idade:</h2>
+            <input type="text" class="register-section-input" placeholder="Digite sua idade">
+        </section>
+
+        <button type="submit">Enviar</button>
+    </form>
+</main>

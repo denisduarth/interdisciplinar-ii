@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.login-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.login-form{
+    margin-left: 250px;
+    margin-top: 70px;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.login-section-input{
+    width: 15cm;
+    height: 50px;
+    text-indent: 20px;
+    border: solid 1px rgb(235,235,235);
+    border-radius: 30px;
+}
+
+.login-form > button{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 45px;
+    background:linear-gradient(to right, rgb(194, 255, 179), rgb(131, 255, 100));
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    list-style: none;
+    text-transform: uppercase;
+    border: none;
+}
+
+.login-form-sign-in{
+    text-decoration: none;
+    color: rgb(92, 202, 64);
+}

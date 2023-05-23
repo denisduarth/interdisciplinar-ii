@@ -33,6 +33,23 @@
   gap: 35px;
 }
 
+.navbar-login > a{
+  color: rgb(131, 255, 100);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px 30px;
+  background:white;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.navbar-login{
+  transition: all 0.3s ease;
+}
+
 :is(.navbar-top-item, .navbar-bottom, .navbar-top-items, .navbar-bottom-items, .material-symbols-rounded){
   display: flex;
   align-items: center;
@@ -63,7 +80,7 @@
     'opsz' 48
 }
 
-:is(.navbar-top-item, .navbar-bottom-item):hover{
+:is(.navbar-top-item, .navbar-bottom-item, .navbar-login):hover{
   transform: scale(1.2);
   opacity: 100%;
 } 

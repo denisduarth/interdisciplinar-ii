@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="~/css/login.css">
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<main>
+    <form action="" method="post" class="login-form">
+        <h1>Login</h1>
+        
+        <section class="login-section">
+            <h2 class="login-section-h2">Email:</h2>
+            <input type="text" class="login-section-input" placeholder="Digite seu e-mail" name="email">
+        </section>
+
+        <section class="login-section">
+            <h2 class="login-section-h2">Senha:</h2>
+            <input type="password" class="login-section-input" placeholder="Digite sua senha" name="password">
+        </section>
+
+        <button type="submit">Enviar</button>
+        <a href="/usuario/create" class="login-form-sign-in">Não tem uma conta? Cadastre-se agora</a>
+    </form>
+</main>
