@@ -1,0 +1,35 @@
+﻿<link rel="stylesheet" href="~/css/index.css">
+
+@model List<Receita>
+@{
+    ViewData["Title"] = "Home";
+}
+
+<main>
+    <section class="your-recipes">
+        <h1 class="main-h1">Suas Receitas</h1>
+        <a href="/receita/create" class="add-recipe">Adicionar Receita</a>
+    </section>
+
+    @* <section>
+        @if(Model != null)
+        {
+            try
+            {
+                @foreach (Receita receita in Model)
+                {
+                    <h1>@receita.idReceita</h1>
+                    <h1>@receita.nome</h1>
+                    <h1>@receita.descricao</h1>
+                }  
+            }
+            catch (System.Exception e)
+            {
+                throw e;
+            }
+        }
+    </section> *@
+
+    <h1 class="main-h1">Para você</h1>
+    <h1 class="main-h1">Em Alta &#10022;</h1>
+</main>
