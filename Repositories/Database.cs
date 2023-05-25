@@ -4,9 +4,15 @@ public abstract class Database : IDisposable
 {
     protected SqlConnection conn;
 
+    /*
+        BANCOS:
+        - DESKTOP-A7IQO85\\SQLDENIS - Meu banco
+        - DESKTOP-U2BFRBE - Banco lab 3
+
+    */
     public Database()
     {
-        string connectionString = "Data Source=DESKTOP-A7IQO85\\SQLDENIS; Initial Catalog=VeganoBD; Integrated Security=true; TrustServerCertificate=true";
+        string connectionString = "Data Source=DESKTOP-U2BFRBE; Initial Catalog=VeganoBD; Integrated Security=true; TrustServerCertificate=true";
 
         conn = new SqlConnection(connectionString);
         conn.Open();

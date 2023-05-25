@@ -9,18 +9,25 @@ body{
     height: 100%;
 }
 
+main, main > img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main > img{
+    width: 14cm;
+}
+
 .login-form{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 25px;
-    margin-left: 375px;
     margin-top: 70px;
     flex-direction: column;
-    border: solid 2px rgb(131, 255, 100, 0.3);
-    border-radius: 20px;
-    width: 50%;
-    padding-block: 20px;
+    width: fit-content;
+    padding: 40px;
     margin-block: 200px;
 }
 
