@@ -95,7 +95,7 @@ public class UsuarioRepository : Database, IUsuarioRepository
         cmd.Connection = conn;
         cmd.CommandText = "SELECT * FROM Usuarios WHERE email = @email AND senha = @password";
         cmd.Parameters.AddWithValue("@email", email);
-        cmd.Parameters.AddWithValue("@senha", password);
+        cmd.Parameters.AddWithValue("@password", password);
 
         Usuario usuario = new Usuario();
         SqlDataReader reader = cmd.ExecuteReader();
@@ -106,8 +106,8 @@ public class UsuarioRepository : Database, IUsuarioRepository
             usuario.nome = reader.GetString(1);
             usuario.email = reader.GetString(2);
             usuario.senha = reader.GetString(3);
-            usuario.idUsuario = reader.GetInt32(4);
-
+            usuario.idade = reader.GetInt32(4);
+            
             return usuario;
         }
         return null;

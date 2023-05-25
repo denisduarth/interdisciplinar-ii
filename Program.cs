@@ -4,6 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IReceitaRepository, ReceitaRepository>();
 builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSession();
 
 var app = builder.Build();

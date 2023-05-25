@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+.navbar{
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+}
+
 .navbar-top{
   width: 100vw;
   height: 13vh;
@@ -12,6 +19,8 @@
   justify-content: space-evenly;
   background: linear-gradient(to right, rgb(194, 255, 179), rgb(131, 255, 100));
   overflow: hidden;
+  box-shadow: 0px 5px 5px rgb(245, 245, 245);
+  z-index: 2;
 }
 
 .navbar-top-search{
@@ -34,13 +43,14 @@
 }
 
 .navbar-login > a{
-  color: rgb(131, 255, 100);
+  color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 15px;
-  padding: 10px 30px;
-  background:white;
-  border-radius: 30px;
+  padding: 7px 34px;
+  background:transparent;
+  border: solid 2px white;
+  border-radius: 15px;
   transition: all 0.3s ease;
   list-style: none;
   text-transform: uppercase;
@@ -68,7 +78,7 @@
 .navbar-top-item > a, .material-symbols-rounded{ 
   text-decoration: none;
   color: rgb(255, 255, 255);
-  font-size: 35px;
+  font-size: 32px;
 }
 
 .material-symbols-rounded{
@@ -81,13 +91,12 @@
 }
 
 :is(.navbar-top-item, .navbar-bottom-item, .navbar-login):hover{
-  transform: scale(1.2);
-  opacity: 100%;
+  transform: scale(1.05);
 } 
 
 .navbar-bottom{
   width: 100vw;
-  height: 10vh;
+  height: 7vh;
   border: solid 1px rgb(235, 235, 235);
   background-color: white;
 }
@@ -100,6 +109,7 @@
 
 .navbar-bottom-item{
   text-decoration: none;
-  color: rgb(150, 150, 150);
+  color: rgb(107, 236, 75);
+  font-size: 14px;
 }
 

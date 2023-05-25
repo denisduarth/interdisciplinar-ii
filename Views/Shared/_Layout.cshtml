@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] | Cozinha Vegana</title>
+    <link rel="shortcut icon" href="~/img/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Interdisciplinar.styles.css" asp-append-version="true" />
@@ -11,43 +12,45 @@
 </head>
 <body>
     <header>
-        <nav class="navbar-top">
-            <a href="/home/index">
-                <img src="~/img/logo2.png" alt="Logo">
-            </a>
+        <nav class="navbar">
+            <nav class="navbar-top">
+                <a href="/home/index">
+                    <img src="~/img/logo-navbar.png" alt="Logo">
+                </a>
 
-            <input type="search" name="" placeholder="Pesquisar" class="navbar-top-search">
+                <input type="search" name="" placeholder="Pesquisar" class="navbar-top-search">
 
-            <ul class="navbar-top-items">
-                <li class="navbar-top-item">
-                   <a href="#">
-                        <span class="material-symbols-rounded">notifications</span>
-                    </a>
-                </li>
-                <li class="navbar-top-item">
-                   <a href="#">&#9829;</a>
-                </li>
-                <li class="navbar-top-item">
-                    <a href="/receita/create">&#10010;</a>
-                </li>
-                <li class="navbar-top-item">
-                   <a href="#">
-                        <span class="material-symbols-rounded">settings</span>
-                    </a>
-                </li>
-                <li class="navbar-login">
-                   <a href="/login/index">Login</a>
-                </li>
-            </ul>
-        </nav>
+                <ul class="navbar-top-items">
+                    <li class="navbar-top-item">
+                    <a href="#">
+                            <span class="material-symbols-rounded">notifications</span>
+                        </a>
+                    </li>
+                    <li class="navbar-top-item">
+                    <a href="#">&#9829;</a>
+                    </li>
+                    <li class="navbar-top-item">
+                        <a href="/receita/create">&#10010;</a>
+                    </li>
+                    <li class="navbar-top-item">
+                    <a href="#">
+                            <span class="material-symbols-rounded">settings</span>
+                        </a>
+                    </li>
+                    <li class="navbar-login">
+                    <a href="/login/index">Login</a>
+                    </li>
+                </ul>
+            </nav>
 
-        <nav class="navbar-bottom">
-            <ul class="navbar-bottom-items">
-                <a href="#" class="navbar-bottom-item">Receitas</a>
-                <a href="#" class="navbar-bottom-item">Categorias</a>
-                <a href="#" class="navbar-bottom-item">Reviews</a>
-                <a href="#"class="navbar-bottom-item">Sobre nós</a>
-            </ul>
+            <nav class="navbar-bottom">
+                <ul class="navbar-bottom-items">
+                    <a href="#" class="navbar-bottom-item">Receitas</a>
+                    <a href="#" class="navbar-bottom-item">Categorias</a>
+                    <a href="#" class="navbar-bottom-item">Reviews</a>
+                    <a href="#"class="navbar-bottom-item">Sobre nós</a>
+                </ul>
+            </nav>
         </nav>
     </header>
     <div class="container">

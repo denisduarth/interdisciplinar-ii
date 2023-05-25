@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JlontqO7Agu5neMLVZ3j6aMeDegtq3GZnD+Wg7nKXro=",
+  "Hash": "6hFcvqcxt55OpQPoQTYH81JwW2J81AY3Qmu8rID3Iq8=",
   "Source": "Interdisciplinar",
   "BasePath": "_content/Interdisciplinar",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Interdisciplinar.bundle.scp.css"
     },
     {
+      "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\create-user.css",
+      "SourceId": "Interdisciplinar",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\",
+      "BasePath": "_content/Interdisciplinar",
+      "RelativePath": "css/create-user.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\create-user.css"
+    },
+    {
       "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\create.css",
       "SourceId": "Interdisciplinar",
       "SourceType": "Discovered",
@@ -83,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\index.css"
+    },
+    {
+      "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\login.css",
+      "SourceId": "Interdisciplinar",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\",
+      "BasePath": "_content/Interdisciplinar",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\site.css",
@@ -136,6 +170,23 @@
       "OriginalItemSpec": "wwwroot\\img\\leaves.png"
     },
     {
+      "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\logo-navbar.png",
+      "SourceId": "Interdisciplinar",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\",
+      "BasePath": "_content/Interdisciplinar",
+      "RelativePath": "img/logo-navbar.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logo-navbar.png"
+    },
+    {
       "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\logo2.png",
       "SourceId": "Interdisciplinar",
       "SourceType": "Discovered",
@@ -151,40 +202,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\logo2.png"
-    },
-    {
-      "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\navbar-logo.png",
-      "SourceId": "Interdisciplinar",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\",
-      "BasePath": "_content/Interdisciplinar",
-      "RelativePath": "img/navbar-logo.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\navbar-logo.png"
-    },
-    {
-      "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\settings.png",
-      "SourceId": "Interdisciplinar",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\",
-      "BasePath": "_content/Interdisciplinar",
-      "RelativePath": "img/settings.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\settings.png"
     },
     {
       "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\js\\site.js",

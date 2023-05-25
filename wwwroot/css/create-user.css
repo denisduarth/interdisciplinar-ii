@@ -13,26 +13,28 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-}
-
-.register-form{
-    margin-left: 250px;
-    margin-top: 70px;
+    gap: 25px;
+    margin-left: 375px;
+    margin-top: 200px;
     flex-direction: column;
+    border: solid 1px rgb(240,240,240);
+    border-radius: 20px;
+    width: 50%;
+    padding-block: 20px;
+    margin-block-end: 100px;
 }
 
 h1{
-    font-size: 55px;
+    font-size: 45px;
     font-weight: bold;
 }
 
 .register-section-input{
-    width: 15cm;
-    height: 50px;
+    width: 13cm;
+    height: 40px;
     text-indent: 20px;
     border: solid 1px rgb(235,235,235);
-    border-radius: 30px;
+    border-radius: 15px;
 }
 
 .register-form > button{
@@ -57,4 +59,12 @@ h1{
 .register-section-input::placeholder{
     opacity: .40;
     font-weight: 600;
+}
+
+.register-section-h2{
+    font-size: 20px;
+}
+
+:is(.register-form > button):hover{
+    transform: scale(1.1);
 }

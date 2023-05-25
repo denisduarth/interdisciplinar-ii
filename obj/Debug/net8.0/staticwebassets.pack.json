@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\Interdisciplinar.bundle.scp.css"
     },
     {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\create-user.css",
+      "PackagePath": "staticwebassets\\css\\create-user.css"
+    },
+    {
       "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\create.css",
       "PackagePath": "staticwebassets\\css\\create.css"
     },
     {
       "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\index.css",
       "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
       "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\site.css",
@@ -25,16 +33,12 @@
       "PackagePath": "staticwebassets\\img\\leaves.png"
     },
     {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\logo-navbar.png",
+      "PackagePath": "staticwebassets\\img\\logo-navbar.png"
+    },
+    {
       "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\logo2.png",
       "PackagePath": "staticwebassets\\img\\logo2.png"
-    },
-    {
-      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\navbar-logo.png",
-      "PackagePath": "staticwebassets\\img\\navbar-logo.png"
-    },
-    {
-      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\settings.png",
-      "PackagePath": "staticwebassets\\img\\settings.png"
     },
     {
       "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\js\\site.js",

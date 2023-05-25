@@ -4,30 +4,41 @@
     box-sizing: border-box;
 }
 
+body{
+    width: 100%;
+    height: 100%;
+}
+
 .login-form{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-}
-
-.login-form{
-    margin-left: 250px;
+    gap: 25px;
+    margin-left: 375px;
     margin-top: 70px;
     flex-direction: column;
+    border: solid 2px rgb(131, 255, 100, 0.3);
+    border-radius: 20px;
+    width: 50%;
+    padding-block: 20px;
+    margin-block: 200px;
 }
 
 h1{
-    font-size: 55px;
+    font-size: 45px;
     font-weight: bold;
 }
 
 .login-section-input{
-    width: 15cm;
-    height: 50px;
+    width: 13cm;
+    height: 40px;
     text-indent: 20px;
     border: solid 1px rgb(235,235,235);
-    border-radius: 30px;
+    border-radius: 15px;
+}
+
+.login-section-h2{
+    font-size:20px;
 }
 
 .login-form > button{
@@ -42,9 +53,27 @@ h1{
     list-style: none;
     text-transform: uppercase;
     border: none;
+    margin-top: 30px;
+}
+
+:is(.login-form > button):hover{
+    transform: scale(1.1);
 }
 
 .login-form-sign-in{
     text-decoration: none;
     color: rgb(92, 202, 64);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.login-form-sign-in:hover{
+    color: rgb(92, 202, 64);
+    opacity: .50;
+}
+
+.login-section-input::placeholder{
+    font-weight: 600;
+    opacity: .30;
 }
