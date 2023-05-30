@@ -1,5 +1,4 @@
-﻿@model Usuario;
-@using Microsoft.AspNetCore.Http;
+﻿@using Microsoft.AspNetCore.Http;
 @using System.Text.Json;
 @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor;
 
@@ -66,11 +65,10 @@
                             @if(user.imagem != null)
                             {
                                 <li class="navbar-top-photo">
-                                    @*
-                                        /usuario/details/@Model.idUsuario
-                                    *@
-                                    <a href="#"> 
-                                        <img src="~/@user.imagem" alt="Fodase" srcset="">
+                                        
+                                   
+                                    <a href="/usuario/details/@user.idUsuario"> 
+                                        <img src="~/@user.imagem" alt="Perfil" srcset="">
                                     </a>
                                 </li>
                             } else{

@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="~/css/update.css" />
+@{
+    ViewData["Title"] = "Editar Perfil";
+}
+
+<main>
+
+    <form action="/usuario/update" method="post" class="update-form">
+        <h1>Editar Perfil</h1>
+        
+        <section class="update-section">
+            <h2 class="update-section-h2">Alterar Nome:</h2>
+            <input type="text" class="update-section-input" placeholder="Novo nome" name="nome">
+        </section>
+
+        <section class="update-section">
+            <h2 class="update-section-h2">Alterar Email:</h2>
+            <input type="text" class="update-section-input" placeholder="Novo email" name="email">
+        </section>
+        
+        <section class="update-section">
+            <h2 class="update-section-h2">Alterar Senha:</h2>
+            <input type="password" class="update-section-input" placeholder="Nova senha" name="senha">
+        </section>
+        
+        <section class="update-section">
+            <h2 class="update-section-h2">Alterar Idade:</h2>
+            <input type="text" class="update-section-input" placeholder="Nova idade" name="idade">
+        </section>
+        
+        <section class="update-section">
+            <h2 class="update-section-h2">Alterar Foto de Perfil:</h2>
+            <input type="text" class="update-section-input" placeholder="Nova foto" name="imagem">
+        </section>
+
+        <button type="submit">Salvar Alterações</button>
+    </form>
+</main>

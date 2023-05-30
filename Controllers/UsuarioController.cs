@@ -46,6 +46,12 @@ public class UsuarioController : Controller
         return View("Index", "Login");
     }
 
+    [HttpGet]
+    public IActionResult Update()
+    {
+        return View();
+    }
+
     [HttpPost]
     public IActionResult Update(int id)
     {

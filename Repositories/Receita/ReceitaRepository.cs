@@ -17,7 +17,8 @@ public class ReceitaRepository : Database, IReceitaRepository
             receita.idReceita = reader.GetInt32(0);
             receita.nome =      reader.GetString(1);
             receita.imagem =    reader.GetString(2);
-            receita.descricao = reader.GetString(3);
+            receita.ingredientes = reader.GetString(3);
+            receita.modoPreparo = reader.GetString(4);
 
             receitas.Add(receita);
         }
@@ -40,7 +41,8 @@ public class ReceitaRepository : Database, IReceitaRepository
             receita.idReceita = reader.GetInt32(0);
             receita.nome =      reader.GetString(1);
             receita.imagem =    reader.GetString(2);
-            receita.descricao = reader.GetString(3);
+            receita.ingredientes = reader.GetString(3);
+            receita.modoPreparo = reader.GetString(4);
             
             return receita;
         }
@@ -51,11 +53,12 @@ public class ReceitaRepository : Database, IReceitaRepository
     {
         SqlCommand cmd = new SqlCommand();
         cmd.Connection = conn;
-        cmd.CommandText = "INSERT INTO Receitas VALUES (@nome, @imagem, @descricao, @categoriaId)";
+        cmd.CommandText = "INSERT INTO Receitas VALUES (@nome, @imagem, @ingredientes,@modoPreparo, @categoriaId)";
         
         cmd.Parameters.AddWithValue("@nome",        receita.nome);
         cmd.Parameters.AddWithValue("@imagem",      receita.imagem);
-        cmd.Parameters.AddWithValue("@descricao",   receita.descricao);
+        cmd.Parameters.AddWithValue("@ingredientes",   receita.ingredientes);
+        cmd.Parameters.AddWithValue("@modoPreparo",   receita.modoPreparo);
         cmd.Parameters.AddWithValue("@categoriaId", categoria.idCategoria);
 
         cmd.ExecuteNonQuery();
@@ -75,11 +78,17 @@ public class ReceitaRepository : Database, IReceitaRepository
     {
         SqlCommand cmd = new SqlCommand();
         cmd.Connection = conn;
-        cmd.CommandText = "UPDATE Receitas SET nome = @nome, imagem = @imagem, descricao = @descricao WHERE idReceita = @id";
+        cmd.CommandText = @"UPDATE Receitas 
+        SET nome = @nome, 
+        imagem = @imagem, 
+        ingredientes = @ingredientes,
+        modoPreparo = @modoPreparo
+        WHERE idReceita = @id";
 
         cmd.Parameters.AddWithValue("@nome", receita.nome);
         cmd.Parameters.AddWithValue("@imagem", receita.imagem);
-        cmd.Parameters.AddWithValue("@descricao", receita.descricao);
+        cmd.Parameters.AddWithValue("@ingredientes", receita.ingredientes);
+        cmd.Parameters.AddWithValue("@modoPreparo", receita.modoPreparo);
         cmd.Parameters.AddWithValue("@id", id);
 
         cmd.ExecuteNonQuery();
