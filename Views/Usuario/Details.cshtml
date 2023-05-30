@@ -1,0 +1,12 @@
+@model Usuario
+
+@{
+    ViewData["Title"] = $"Usuário {Model.nome}";
+}
+
+<h1>@Model.idUsuario</h1>
+<h1>@Model.nome</h1>
+<h1>@Model.email</h1>
+<h1>@Model.senha</h1>
+<h1>@Model.idade</h1>
+<img src="~/@Model.imagem" alt="" srcset="">

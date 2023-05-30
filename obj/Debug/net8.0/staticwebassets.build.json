@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6hFcvqcxt55OpQPoQTYH81JwW2J81AY3Qmu8rID3Iq8=",
+  "Hash": "HOjo3O0dQY+4u47rcMzv4Dz6EiR9Q1dxofNdUjsYcjg=",
   "Source": "Interdisciplinar",
   "BasePath": "_content/Interdisciplinar",
   "Mode": "Default",
@@ -49,23 +49,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Interdisciplinar.bundle.scp.css"
-    },
-    {
-      "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\create-user.css",
-      "SourceId": "Interdisciplinar",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\",
-      "BasePath": "_content/Interdisciplinar",
-      "RelativePath": "css/create-user.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\create-user.css"
     },
     {
       "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\create.css",
@@ -119,6 +102,23 @@
       "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
+      "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\register.css",
+      "SourceId": "Interdisciplinar",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\",
+      "BasePath": "_content/Interdisciplinar",
+      "RelativePath": "css/register.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\register.css"
+    },
+    {
       "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\site.css",
       "SourceId": "Interdisciplinar",
       "SourceType": "Discovered",
@@ -170,12 +170,12 @@
       "OriginalItemSpec": "wwwroot\\img\\leaves.png"
     },
     {
-      "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\logo-navbar.png",
+      "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\logo.png",
       "SourceId": "Interdisciplinar",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\",
       "BasePath": "_content/Interdisciplinar",
-      "RelativePath": "img/logo-navbar.png",
+      "RelativePath": "img/logo.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,15 +184,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\logo-navbar.png"
+      "OriginalItemSpec": "wwwroot\\img\\logo.png"
     },
     {
-      "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\logo2.png",
+      "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\Usuario\\foto.jpg",
       "SourceId": "Interdisciplinar",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\",
       "BasePath": "_content/Interdisciplinar",
-      "RelativePath": "img/logo2.png",
+      "RelativePath": "img/Usuario/foto.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -201,7 +201,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\logo2.png"
+      "OriginalItemSpec": "wwwroot\\img\\Usuario\\foto.jpg"
     },
     {
       "Identity": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\js\\site.js",

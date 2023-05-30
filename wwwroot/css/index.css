@@ -9,7 +9,7 @@ body{
     height: 100%;
 }
 
-.your-recipes{
+.your-recipes, .new-recipe{
     display: flex;
     align-items: center;
     justify-content: center;

@@ -3,11 +3,11 @@ using System.Text.Json;
 
 public class UsuarioController : Controller
 {
-    IUsuarioRepository usuarioRepository;
+    private IUsuarioRepository _usuarioRepository;
 
     public UsuarioController(IUsuarioRepository usuarioRepository)
     {
-        this.usuarioRepository = usuarioRepository;
+        this._usuarioRepository = usuarioRepository;
     }
 
     [HttpGet]
@@ -25,20 +25,31 @@ public class UsuarioController : Controller
     [HttpPost]
     public IActionResult Create(Usuario usuario)
     {
-        usuarioRepository.Create(usuario);
+        _usuarioRepository.Create(usuario);
         return View("/Views/Login/Index.cshtml");
+    }
+
+    [HttpGet]
+    public IActionResult Details(int id)
+    {
+        Usuario usuario = _usuarioRepository.Read(id);
+        if(usuario != null)
+        {
+            return View(usuario);
+        }
+        return NotFound();
     }
 
     public IActionResult Delete(int id)
     {
-        usuarioRepository.Delete(id);
+        _usuarioRepository.Delete(id);
         return View("Index", "Login");
     }
 
     [HttpPost]
     public IActionResult Update(int id)
     {
-        Usuario usuario = usuarioRepository.Read(id);
+        Usuario usuario = _usuarioRepository.Read(id);
         if(usuario != null)
         {
             return View(usuario);
@@ -49,17 +60,17 @@ public class UsuarioController : Controller
     [HttpPost]
     public IActionResult Update(Usuario usuario, int id)
     {
-        usuarioRepository.Update(usuario, id);
-        return View("Index","Home");
+        _usuarioRepository.Update(usuario, id);
+        return View("Index", "Home");
     }
 
     [HttpPost]
-    public ActionResult Login(IFormCollection form)
+    public IActionResult Login(IFormCollection form)
     {
         string? email = form["email"];
         string? password = form["password"];
 
-        var user = usuarioRepository.Login(email!, password!);
+        Usuario? user = _usuarioRepository.Login(email!, password!);
 
         if(user == null)
         {
@@ -69,15 +80,13 @@ public class UsuarioController : Controller
 
         HttpContext.Session.SetString("user", JsonSerializer.Serialize(user));
 
-        return RedirectToAction("/Views/Home/Index.cshtml");
+        return RedirectToAction("Index","Home");
     }
 
     [HttpGet]
     public ActionResult Logout()
     {
         HttpContext.Session.Clear();
-        return RedirectToAction("/Views/Login/Index.cshtml");
+        return RedirectToAction("Index","Home");
     }
-
-
 }

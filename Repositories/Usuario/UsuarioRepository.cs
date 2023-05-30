@@ -6,12 +6,13 @@ public class UsuarioRepository : Database, IUsuarioRepository
     {
         SqlCommand cmd = new SqlCommand();
         cmd.Connection = conn;
-        cmd.CommandText = "INSERT INTO Usuarios VALUES (@nome, @email, @senha, @idade)";
+        cmd.CommandText = "INSERT INTO Usuarios VALUES (@nome, @email, @senha, @idade, @imagem)";
 
-        cmd.Parameters.AddWithValue("@nome", usuario.nome);
-        cmd.Parameters.AddWithValue("@email", usuario.email);
-        cmd.Parameters.AddWithValue("@senha", usuario.senha);
-        cmd.Parameters.AddWithValue("@idade", usuario.idade);
+        cmd.Parameters.AddWithValue("@nome",    usuario.nome);
+        cmd.Parameters.AddWithValue("@email",   usuario.email);
+        cmd.Parameters.AddWithValue("@senha",   usuario.senha);
+        cmd.Parameters.AddWithValue("@idade",   usuario.idade);
+        cmd.Parameters.AddWithValue("@imagem",  usuario.imagem);
 
         cmd.ExecuteNonQuery();
     }
@@ -41,10 +42,11 @@ public class UsuarioRepository : Database, IUsuarioRepository
             Usuario usuario = new Usuario();
 
             usuario.idUsuario = reader.GetInt32(0);
-            usuario.nome = reader.GetString(1);
-            usuario.email = reader.GetString(2);
-            usuario.senha = reader.GetString(3);
-            usuario.idUsuario = reader.GetInt32(4);
+            usuario.nome =      reader.GetString(1);
+            usuario.email =     reader.GetString(2);
+            usuario.senha =     reader.GetString(3);
+            usuario.idade =     reader.GetInt32(4);
+            usuario.imagem =    reader.GetString(5);
 
             usuarios.Add(usuario);
         }
@@ -64,10 +66,11 @@ public class UsuarioRepository : Database, IUsuarioRepository
         if(reader.Read())
         {
             usuario.idUsuario = reader.GetInt32(0);
-            usuario.nome = reader.GetString(1);
-            usuario.email = reader.GetString(2);
-            usuario.senha = reader.GetString(3);
-            usuario.idUsuario = reader.GetInt32(4);
+            usuario.nome =      reader.GetString(1);
+            usuario.email =     reader.GetString(2);
+            usuario.senha =     reader.GetString(3);
+            usuario.idade =     reader.GetInt32(4);
+            usuario.imagem =    reader.GetString(5);
 
             return usuario;
         }
@@ -78,13 +81,20 @@ public class UsuarioRepository : Database, IUsuarioRepository
     {
         SqlCommand cmd = new SqlCommand();
         cmd.Connection = conn;
-        cmd.CommandText = "UPDATE Usuarios SET nome = @nome, email = @email, senha = @senha, idade = @idade WHERE idUsuario = @id";
+        cmd.CommandText = @"UPDATE Usuarios 
+        SET nome = @nome, 
+        email = @email, 
+        senha = @senha, 
+        idade = @idade, 
+        imagem = @imagem
+        WHERE idUsuario = @id";
 
-        cmd.Parameters.AddWithValue("@nome", usuario.nome);
-        cmd.Parameters.AddWithValue("@email", usuario.email);
-        cmd.Parameters.AddWithValue("@senha", usuario.senha);
-        cmd.Parameters.AddWithValue("@idade", usuario.idade);
-        cmd.Parameters.AddWithValue("@id", id);
+        cmd.Parameters.AddWithValue("@nome",    usuario.nome);
+        cmd.Parameters.AddWithValue("@email",   usuario.email);
+        cmd.Parameters.AddWithValue("@senha",   usuario.senha);
+        cmd.Parameters.AddWithValue("@idade",   usuario.idade);
+        cmd.Parameters.AddWithValue("@imagem",  usuario.imagem);
+        cmd.Parameters.AddWithValue("@id",      id);
 
         cmd.ExecuteNonQuery();
     }
@@ -94,8 +104,8 @@ public class UsuarioRepository : Database, IUsuarioRepository
         SqlCommand cmd = new SqlCommand();
         cmd.Connection = conn;
         cmd.CommandText = "SELECT * FROM Usuarios WHERE email = @email AND senha = @password";
-        cmd.Parameters.AddWithValue("@email", email);
-        cmd.Parameters.AddWithValue("@password", password);
+        cmd.Parameters.AddWithValue("@email",       email);
+        cmd.Parameters.AddWithValue("@password",    password);
 
         Usuario usuario = new Usuario();
         SqlDataReader reader = cmd.ExecuteReader();
@@ -103,10 +113,11 @@ public class UsuarioRepository : Database, IUsuarioRepository
         if(reader.Read())
         {
             usuario.idUsuario = reader.GetInt32(0);
-            usuario.nome = reader.GetString(1);
-            usuario.email = reader.GetString(2);
-            usuario.senha = reader.GetString(3);
-            usuario.idade = reader.GetInt32(4);
+            usuario.nome =      reader.GetString(1);
+            usuario.email =     reader.GetString(2);
+            usuario.senha =     reader.GetString(3);
+            usuario.idade =     reader.GetInt32(4);
+            usuario.imagem =    reader.GetString(5);
             
             return usuario;
         }

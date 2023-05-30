@@ -1,11 +1,12 @@
-<link rel="stylesheet" href="~/css/create-user.css" />
+<link rel="stylesheet" href="~/css/register.css" />
 @{
     ViewData["Title"] = "Cadastro";
 }
 
 <main>
+    <img src="https://cdn.loveandlemons.com/wp-content/uploads/2019/12/vegan-recipes.jpg" alt="" srcset="">
+    
     <form action="/usuario/create" method="post" class="register-form">
-        <img src="~/img/leaves.png" alt="Logo">
         <h1>Cadastro de Usuário</h1>
         
         <section class="register-section">
@@ -26,6 +27,11 @@
         <section class="register-section">
             <h2 class="register-section-h2">Idade:</h2>
             <input type="text" class="register-section-input" placeholder="Digite sua idade" name="idade">
+        </section>
+        
+        <section class="register-section">
+            <h2 class="register-section-h2">Caminho da foto de perfil:</h2>
+            <input type="text" class="register-section-input" placeholder="Caminho da foto" name="imagem">
         </section>
 
         <button type="submit">Enviar</button>

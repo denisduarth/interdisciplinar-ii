@@ -1,25 +1,21 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    width: 100%;
-    height: 100%;
-}
-
-main, main > img{
+main,
+main>img {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-main > img{
+main>img {
     width: 14cm;
 }
 
-.login-form{
+.login-form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,30 +27,30 @@ main > img{
     margin-block: 200px;
 }
 
-h1{
+h1 {
     font-size: 45px;
     font-weight: bold;
 }
 
-.login-section-input{
-    width: 13cm;
+.login-section-input {
+    width: 9cm;
     height: 40px;
     text-indent: 20px;
-    border: solid 1px rgb(235,235,235);
+    border: solid 1px rgb(235, 235, 235);
     border-radius: 15px;
 }
 
-.login-section-h2{
-    font-size:20px;
+.login-section-h2 {
+    font-size: 20px;
 }
 
-.login-form > button{
+.login-form>button {
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 15px;
     padding: 10px 45px;
-    background:linear-gradient(to right, rgb(194, 255, 179), rgb(131, 255, 100));
+    background: linear-gradient(to right, rgb(194, 255, 179), rgb(131, 255, 100));
     border-radius: 30px;
     transition: all 0.3s ease;
     list-style: none;
@@ -63,11 +59,11 @@ h1{
     margin-top: 30px;
 }
 
-:is(.login-form > button):hover{
+:is(.login-form > button):hover {
     transform: scale(1.1);
 }
 
-.login-form-sign-in{
+.login-form-sign-in {
     text-decoration: none;
     color: rgb(92, 202, 64);
     transition: all 0.3s ease;
@@ -75,12 +71,12 @@ h1{
     margin-top: 30px;
 }
 
-.login-form-sign-in:hover{
+.login-form-sign-in:hover {
     color: rgb(92, 202, 64);
     opacity: .50;
 }
 
-.login-section-input::placeholder{
+.login-section-input::placeholder {
     font-weight: 600;
     opacity: .30;
 }

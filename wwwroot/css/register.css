@@ -9,19 +9,28 @@ body{
     height: 100vh;
 }
 
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main > img{
+    height: fit-content;
+    width: 50vw;
+    box-shadow: 5px 0px 10px rgb(205, 205, 205);
+}
+
 .register-form{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 25px;
-    margin-left: 375px;
-    margin-top: 200px;
+    margin-bottom: 150px;
+    margin-top: 150px;
     flex-direction: column;
-    border: solid 1px rgb(240,240,240);
-    border-radius: 20px;
     width: 50%;
-    padding-block: 20px;
-    margin-block-end: 100px;
+    padding: 30px 60px;
 }
 
 h1{
@@ -30,7 +39,7 @@ h1{
 }
 
 .register-section-input{
-    width: 13cm;
+    width: 11cm;
     height: 40px;
     text-indent: 20px;
     border: solid 1px rgb(235,235,235);

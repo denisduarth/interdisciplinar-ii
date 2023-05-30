@@ -10,7 +10,8 @@ CREATE TABLE Usuarios
 	nome		VARCHAR(100)	NOT NULL,
 	email		VARCHAR(100)	NOT NULL,
 	senha		VARCHAR(20)		NOT NULL,
-	idade		INT				NOT NULL
+	idade		INT				NOT NULL,
+	imagem		VARCHAR(100)	NOT NULL
 )
 GO
 
@@ -23,11 +24,12 @@ GO
 
 CREATE TABLE Receitas
 (
-	idReceita	INT				PRIMARY KEY		IDENTITY,
-	nome		VARCHAR(50)		NOT NULL,
-	imagem		VARCHAR(200)	NULL,
-	descricao	VARCHAR(1000)	NOT NULL,
-	categoriaId	INT				NOT NULL,
+	idReceita		INT				PRIMARY KEY		IDENTITY,
+	nome			VARCHAR(50)		NOT NULL,
+	imagem			VARCHAR(200)	NULL,
+	descricao		VARCHAR(1000)	NOT NULL,
+	categoriaId		INT				NOT NULL,
+	dataPostagem	DATETIME		NOT NULL,
 	FOREIGN KEY	(categoriaId)	references Categorias(idCategoria)
 
 )
@@ -46,7 +48,7 @@ GO
 CREATE TABLE Comentarios
 (
 	idComentario INT			PRIMARY KEY		IDENTITY,
-	texto		 VARCHAR(200)	NULL,
+	texto		 VARCHAR(MAX)	NULL,
 	usuarioId	 INT			NOT NULL,
 	receitaId	 INT			NOT NULL,
 	FOREIGN KEY (usuarioId)		references Usuarios(idUsuario),

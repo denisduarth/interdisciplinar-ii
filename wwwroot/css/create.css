@@ -1,69 +1,18 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    width: 100vw;
-    height: 100vh;
-}
-
 .new-recipe{
-    margin-top: 20px;
-    margin-left: 150px;
-    gap: 40px;
-}
-
-
-.new-recipe, h1, .new-recipe-input{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top:20vh;
+    gap: 20px;
 }
 
-h1{
-    font-weight: bold;
-    font-size: 55px;
-    text-align: center;
-}
-
-:is(.input-input1, .input-input2){
-    width: 15cm;
-    height: 50px;
-    text-indent: 20px;
-    outline: none;
-    border: solid 1px rgb(235,235,235);
-    border-radius: 30px;
-}
-
-:is(.input-input1, .input-input2)::placeholder{
-    font-weight: bold;
-    opacity: .20;
-}
-
-.input-input2{
-    padding-top: 20px;
-    height: 200px;
-    text-align: start;
-}
-
-.new-recipe > button[type="submit"]{
-    width: 200px;
-    border: none;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 10px 17px;
-    background:linear-gradient(to right, rgb(194, 255, 179), rgb(131, 255, 100));
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    list-style: none;
-    text-transform: uppercase;
-}
-
-.input-h2{
-    font-weight: bold;
+.new-recipe-h1{
+    
 }
