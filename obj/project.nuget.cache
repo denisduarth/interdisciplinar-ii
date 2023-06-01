@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rOkPIoBmHSv+SEqWanwYLwz4A1FzG267se+tEDYClOYn39MTsbhR7By0lK8qmvMtS8jP8wXF85BFn5pfK/JUtA==",
+  "dgSpecHash": "mU0lmToVJKEnkAWPRTRmEedkD7H5fDx5eZ9tpLCOZH3r5DGP9xMzWu0y/yrToRt9QbQHZQH0rAFW9dywbAiRng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aluno\\POOJURKOVICH\\interdisciplinar-ii-1\\Interdisciplinar.csproj",
+  "projectFilePath": "C:\\POO\\interdisciplinar-ii\\Interdisciplinar.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aluno\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\aluno\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

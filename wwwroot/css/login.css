@@ -20,11 +20,9 @@ main>img {
     align-items: center;
     justify-content: center;
     gap: 25px;
-    margin-top: 70px;
     flex-direction: column;
     width: fit-content;
     padding: 40px;
-    margin-block: 200px;
 }
 
 h1 {
@@ -77,6 +75,6 @@ h1 {
 }
 
 .login-section-input::placeholder {
-    font-weight: 600;
+    font-weight: bold;
     opacity: .30;
 }

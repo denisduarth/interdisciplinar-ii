@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aluno\\POOJURKOVICH\\interdisciplinar-ii-1\\Interdisciplinar.csproj": {}
+    "C:\\POO\\interdisciplinar-ii\\Interdisciplinar.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aluno\\POOJURKOVICH\\interdisciplinar-ii-1\\Interdisciplinar.csproj": {
+    "C:\\POO\\interdisciplinar-ii\\Interdisciplinar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aluno\\POOJURKOVICH\\interdisciplinar-ii-1\\Interdisciplinar.csproj",
+        "projectUniqueName": "C:\\POO\\interdisciplinar-ii\\Interdisciplinar.csproj",
         "projectName": "Interdisciplinar",
-        "projectPath": "C:\\Users\\aluno\\POOJURKOVICH\\interdisciplinar-ii-1\\Interdisciplinar.csproj",
+        "projectPath": "C:\\POO\\interdisciplinar-ii\\Interdisciplinar.csproj",
         "packagesPath": "C:\\Users\\aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aluno\\POOJURKOVICH\\interdisciplinar-ii-1\\obj\\",
+        "outputPath": "C:\\POO\\interdisciplinar-ii\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aluno\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net6.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -35,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.Data.SqlClient": {
               "target": "Package",
@@ -53,8 +53,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -66,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

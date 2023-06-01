@@ -1,3 +1,4 @@
+@model Usuario
 <link rel="stylesheet" href="~/css/update.css" />
 @{
     ViewData["Title"] = "Editar Perfil";
@@ -6,7 +7,10 @@
 <main>
 
     <form action="/usuario/update" method="post" class="update-form">
-        <h1>Editar Perfil</h1>
+        <div class="header">
+            @* <img src="~/@Model.imagem" alt="Foto" srcset=""> *@
+            <h1>Editar Perfil</h1>
+        </div>
         
         <section class="update-section">
             <h2 class="update-section-h2">Alterar Nome:</h2>
