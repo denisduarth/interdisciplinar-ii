@@ -65,3 +65,8 @@ CREATE TABLE Favoritos
 	FOREIGN KEY (usuarioId)		references Usuarios(idUsuario)
 )
 GO
+
+INSERT INTO Categorias VALUES	('Sobremesas'),
+								('Sucos'),
+								('Refeições')
+GO

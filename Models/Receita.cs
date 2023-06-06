@@ -12,4 +12,5 @@ public class Receita
         a publicação da receita foi feita.
     */
     public DateTime dataPostagem {get;} = DateTime.Now;
+    public int categoriaId;
 }

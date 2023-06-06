@@ -16,9 +16,9 @@ public class ReceitaController : Controller
     }
 
     [HttpPost]
-    public IActionResult Create(Receita receita, Categoria categoria)
+    public IActionResult Create(Receita receita)
     {
-        receitaRepository.Create(receita, categoria);
+        receitaRepository.Create(receita);
         return RedirectToAction("Index","Home");
     }
 
@@ -33,15 +33,12 @@ public class ReceitaController : Controller
         return NotFound();
     }
     
-    [HttpDelete]
-    [HttpPost]
     public IActionResult Delete(int id)
     {
         receitaRepository.Delete(id);
         return RedirectToAction("Index","Home");
     }
 
-    [HttpPut]
     [HttpPost]
     public IActionResult Update(Receita receita, int id)
     {

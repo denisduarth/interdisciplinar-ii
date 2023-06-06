@@ -1,20 +1,38 @@
 @model Usuario
-
+<link rel="stylesheet" href="~/css/details.css">
 @{
-    ViewData["Title"] = $"Usuário {Model.nome}";
+    ViewData["Title"] = $"Usuário '{Model.nome}'";
 }
 
-<h1>@Model.idUsuario</h1>
+<main>
+    <aside class="main">
+        <img src="~/@Model.imagem" alt="" srcset="">
+        <div class="main-info">
+            <div class="info">
+                <h1 class="main-info-nome">@Model.nome</h1>
+                 <a href="/usuario/logout">
+                    <span class="material-symbols-rounded" id="logout">logout</span>
+                </a>
+            </div>
+            <h1 class="main-info-email">@Model.email</h1>
 
-@* <h1>@Model.seguidor</h1> *@
-@* minhas receitas (se tiver) *@
-<br>
-<br>
-<br>
-<br>
-<br>
-<img src="~/@Model.imagem" alt="" srcset="">
-<h1>@Model.nome</h1>
-<h1>@Model.email</h1>
-
-<a href="/usuario/update/@Model.idUsuario"> Editar Perfil</a>
+            <div class="buttons">
+                <a href="/usuario/update/@Model.idUsuario" class="update">Editar Perfil</a>
+                <a onclick="confirmDelete()" class="delete">Excluir Conta</a>
+            </div>
+        </div>
+    </aside>
+</main>
+<script>
+    function confirmDelete()
+    {
+        if(confirm("Deseja realmente deletar seu perfil?"))
+        {
+            window.location.href = "/usuario/delete/@Model.idUsuario";
+        }
+        else
+        {
+            return false;
+        }
+    }
+</script>

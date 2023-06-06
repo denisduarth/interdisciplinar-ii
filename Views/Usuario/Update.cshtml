@@ -1,40 +1,39 @@
+<link rel="stylesheet" href="~/css/update.css"/>
 @model Usuario
-<link rel="stylesheet" href="~/css/update.css" />
 @{
     ViewData["Title"] = "Editar Perfil";
 }
 
 <main>
-
-    <form action="/usuario/update" method="post" class="update-form">
+    <form action="/usuario/update/@Model.idUsuario" method="post" class="update-form">
         <div class="header">
-            @* <img src="~/@Model.imagem" alt="Foto" srcset=""> *@
+            <img src="~/@Model.imagem" alt="" srcset="">
             <h1>Editar Perfil</h1>
         </div>
         
         <section class="update-section">
             <h2 class="update-section-h2">Alterar Nome:</h2>
-            <input type="text" class="update-section-input" placeholder="Novo nome" name="nome">
+            <input type="text" class="update-section-input" placeholder="Novo nome" name="nome" value="@Model.nome">
         </section>
 
         <section class="update-section">
             <h2 class="update-section-h2">Alterar Email:</h2>
-            <input type="text" class="update-section-input" placeholder="Novo email" name="email">
+            <input type="text" class="update-section-input" placeholder="Novo email" name="email" value="@Model.email">
         </section>
         
         <section class="update-section">
             <h2 class="update-section-h2">Alterar Senha:</h2>
-            <input type="password" class="update-section-input" placeholder="Nova senha" name="senha">
+            <input type="password" class="update-section-input" placeholder="Nova senha" name="senha"value="@Model.senha">
         </section>
         
         <section class="update-section">
             <h2 class="update-section-h2">Alterar Idade:</h2>
-            <input type="text" class="update-section-input" placeholder="Nova idade" name="idade">
+            <input type="text" class="update-section-input" placeholder="Nova idade" name="idade" value="@Model.idade">
         </section>
         
         <section class="update-section">
             <h2 class="update-section-h2">Alterar Foto de Perfil:</h2>
-            <input type="text" class="update-section-input" placeholder="Nova foto" name="imagem">
+            <input type="text" class="update-section-input" placeholder="Nova foto" name="imagem" value="@Model.imagem">
         </section>
 
         <button type="submit">Salvar Alterações</button>

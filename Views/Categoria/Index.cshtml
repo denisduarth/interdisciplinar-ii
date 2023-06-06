@@ -1,0 +1,15 @@
+@model List<Categoria>
+@{
+    ViewData["Title"] = "Categorias";
+}
+
+<h1>Categorias</h1>
+<a href="/categoria/create">Criar</a>
+
+@if(Model != null)
+{
+    @foreach (Categoria categoria in Model)
+    {
+        <h1>@categoria.nome</h1>
+    }
+}

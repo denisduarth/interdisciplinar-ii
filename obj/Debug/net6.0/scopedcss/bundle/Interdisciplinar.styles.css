@@ -5,13 +5,6 @@
   box-sizing: border-box;
 }
 
-.navbar[b-lqecrp9pge] {
-  /* top: 0;
-  overflow: hidden;
-  position: fixed; */
-  z-index: 1;
-}
-
 .navbar-top[b-lqecrp9pge] {
   width: 100vw;
   height: 13vh;
@@ -19,9 +12,6 @@
   align-items: center;
   justify-content: space-evenly;
   background: linear-gradient(to right, rgb(194, 255, 179), rgb(131, 255, 100));
-  overflow: hidden;
-  box-shadow: 0px 5px 5px rgb(245, 245, 245);
-  z-index: 2;
 }
 
 .navbar-top-search[b-lqecrp9pge] {
@@ -31,6 +21,10 @@
   border-radius: 30px;
   text-indent: 20px;
   outline: none;
+}
+
+.navbar-top-search:focus-within[b-lqecrp9pge]{
+  transform: scale(1.1);
 }
 
 .navbar-top-search[b-lqecrp9pge]::placeholder {
@@ -44,7 +38,7 @@
 }
 
 .navbar-login>a[b-lqecrp9pge] {
-  color: rgba(255, 255, 255);
+  color: rgb(0, 95, 0);
   text-decoration: none;
   font-weight: bold;
   border-radius: 15px;
@@ -53,7 +47,7 @@
   text-transform: uppercase;
 }
 
-:is(.navbar-top-item, .navbar-bottom, .navbar-top-items, .navbar-bottom-items, .material-symbols-rounded, .material-symbols-outlined)[b-lqecrp9pge] {
+:is(.navbar-top-item, .navbar-bottom, .navbar-top-items, .navbar-bottom-items, .material-symbols-rounded)[b-lqecrp9pge] {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,14 +56,13 @@
 .navbar-top-item[b-lqecrp9pge],
 .navbar-bottom-item[b-lqecrp9pge],
 .navbar-login[b-lqecrp9pge],
-.navbar-top-photo[b-lqecrp9pge] {
+.navbar-top-photo[b-lqecrp9pge],
+.navbar-top-search[b-lqecrp9pge] {
   transition: all 0.2s ease-in-out;
-  cursor: pointer;
 }
 
 .navbar-top-item>a[b-lqecrp9pge],
-.material-symbols-rounded[b-lqecrp9pge],
-.material-symbols-outlined[b-lqecrp9pge] {
+.material-symbols-rounded[b-lqecrp9pge] {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 30px;
@@ -82,20 +75,20 @@
   padding: 8px;
 }
 
-.navbar-top-photo[b-lqecrp9pge]{
+.navbar-top-photo[b-lqecrp9pge] {
   display: flex;
   clip-path: circle(40%);
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
 }
 
-.navbar-top-photo:hover[b-lqecrp9pge]{
+.navbar-top-photo:hover[b-lqecrp9pge] {
   scale: 1.2;
 }
 
 .navbar-bottom[b-lqecrp9pge] {
   width: 100vw;
-  height: 7vh;
+  height: 8vh;
   border: solid 1px rgb(235, 235, 235);
   background-color: white;
 }
@@ -109,9 +102,17 @@
 .navbar-bottom-item[b-lqecrp9pge] {
   text-decoration: none;
   color: rgb(107, 236, 75);
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .navbar-bottom-item:hover[b-lqecrp9pge] {
   transform: scale(1.2);
+}
+
+.material-symbols-rounded[b-lqecrp9pge] {
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }

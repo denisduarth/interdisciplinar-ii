@@ -4,18 +4,11 @@
     box-sizing: border-box;
 }
 
-main{
+.main, h1{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-main > img{
-    height: fit-content;
-    width: 50vw;
-    box-shadow: 5px 0px 10px rgb(205, 205, 205);
-    object-fit: fill;
-    object-position: 0px;
+    margin: 50px;
 }
 
 .register-form{
@@ -28,12 +21,12 @@ main > img{
 }
 
 h1{
-    font-size: 45px;
+    font-size: 55px;
     font-weight: bold;
 }
 
 .register-section-input{
-    width: 11cm;
+    width: 9cm;
     height: 40px;
     text-indent: 20px;
     border: solid 1px rgb(235,235,235);
@@ -45,13 +38,14 @@ h1{
     text-decoration: none;
     font-weight: bold;
     font-size: 15px;
-    padding: 10px 45px;
+    padding: 10px 50px;
     background:linear-gradient(to right, rgb(194, 255, 179), rgb(131, 255, 100));
     border-radius: 30px;
     transition: all 0.3s ease;
     list-style: none;
     text-transform: uppercase;
     border: none;
+    margin-top: 30px;
 }
 
 .register-form-sign-in{
@@ -62,6 +56,7 @@ h1{
 .register-section-input::placeholder{
     opacity: .40;
     font-weight: 600;
+    color: rgb(29, 114, 21);;
 }
 
 .register-section-h2{

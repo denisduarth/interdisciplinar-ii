@@ -1,0 +1,13 @@
+@model Categoria;
+@{
+    ViewData["Title"] = "Criar Categoria";
+}
+
+<main>
+    <form action="/categoria/create" method="post">
+        <h1>Nome da Categoria</h1>
+        <input type="text" name="nome" id="">
+
+        <button type="submit">Criar</button>
+    </form>
+</main>

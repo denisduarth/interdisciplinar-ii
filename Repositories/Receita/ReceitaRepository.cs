@@ -14,11 +14,11 @@ public class ReceitaRepository : Database, IReceitaRepository
         {
             Receita receita = new Receita();
             
-            receita.idReceita = reader.GetInt32(0);
-            receita.nome =      reader.GetString(1);
-            receita.imagem =    reader.GetString(2);
-            receita.ingredientes = reader.GetString(3);
-            receita.modoPreparo = reader.GetString(4);
+            receita.idReceita =     reader.GetInt32(0);
+            receita.nome =          reader.GetString(1);
+            receita.imagem =        reader.GetString(2);
+            receita.ingredientes =  reader.GetString(3);
+            receita.modoPreparo =   reader.GetString(4);
 
             receitas.Add(receita);
         }
@@ -38,28 +38,28 @@ public class ReceitaRepository : Database, IReceitaRepository
         {
             Receita receita = new Receita();
             
-            receita.idReceita = reader.GetInt32(0);
-            receita.nome =      reader.GetString(1);
-            receita.imagem =    reader.GetString(2);
-            receita.ingredientes = reader.GetString(3);
-            receita.modoPreparo = reader.GetString(4);
+            receita.idReceita =     reader.GetInt32(0);
+            receita.nome =          reader.GetString(1);
+            receita.imagem =        reader.GetString(2);
+            receita.ingredientes =  reader.GetString(3);
+            receita.modoPreparo =   reader.GetString(4);
             
             return receita;
         }
         return null;
     }
 
-    public void Create(Receita receita, Categoria categoria)
+    public void Create(Receita receita)
     {
         SqlCommand cmd = new SqlCommand();
         cmd.Connection = conn;
         cmd.CommandText = "INSERT INTO Receitas VALUES (@nome, @imagem, @ingredientes,@modoPreparo, @categoriaId)";
         
-        cmd.Parameters.AddWithValue("@nome",        receita.nome);
-        cmd.Parameters.AddWithValue("@imagem",      receita.imagem);
-        cmd.Parameters.AddWithValue("@ingredientes",   receita.ingredientes);
-        cmd.Parameters.AddWithValue("@modoPreparo",   receita.modoPreparo);
-        cmd.Parameters.AddWithValue("@categoriaId", categoria.idCategoria);
+        cmd.Parameters.AddWithValue("@nome",            receita.nome);
+        cmd.Parameters.AddWithValue("@imagem",          receita.imagem);
+        cmd.Parameters.AddWithValue("@ingredientes",    receita.ingredientes);
+        cmd.Parameters.AddWithValue("@modoPreparo",     receita.modoPreparo);
+        cmd.Parameters.AddWithValue("@categoriaId",     receita.categoriaId);
 
         cmd.ExecuteNonQuery();
     }
@@ -85,10 +85,10 @@ public class ReceitaRepository : Database, IReceitaRepository
         modoPreparo = @modoPreparo
         WHERE idReceita = @id";
 
-        cmd.Parameters.AddWithValue("@nome", receita.nome);
-        cmd.Parameters.AddWithValue("@imagem", receita.imagem);
-        cmd.Parameters.AddWithValue("@ingredientes", receita.ingredientes);
-        cmd.Parameters.AddWithValue("@modoPreparo", receita.modoPreparo);
+        cmd.Parameters.AddWithValue("@nome",            receita.nome);
+        cmd.Parameters.AddWithValue("@imagem",          receita.imagem);
+        cmd.Parameters.AddWithValue("@ingredientes",    receita.ingredientes);
+        cmd.Parameters.AddWithValue("@modoPreparo",     receita.modoPreparo);
         cmd.Parameters.AddWithValue("@id", id);
 
         cmd.ExecuteNonQuery();

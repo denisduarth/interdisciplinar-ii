@@ -12,7 +12,7 @@ public abstract class Database : IDisposable
     */
     public Database()
     {
-        string connectionString = "Data Source=LAB0208; Initial Catalog=VeganoBD; Integrated Security=true; TrustServerCertificate=true";
+        string connectionString = "Data Source=DESKTOP-A7IQO85\\SQLDENIS; Initial Catalog=VeganoBD; Integrated Security=true; TrustServerCertificate=true";
 
         conn = new SqlConnection(connectionString);
         conn.Open();

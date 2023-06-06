@@ -42,17 +42,12 @@ public class UsuarioController : Controller
 
     public IActionResult Delete(int id)
     {
+        Logout();
         _usuarioRepository.Delete(id);
-        return View("Index", "Login");
+        return View("/Views/Login/Index.cshtml");
     }
 
     [HttpGet]
-    public IActionResult Update()
-    {
-        return View();
-    }
-
-    [HttpPost]
     public IActionResult Update(int id)
     {
         Usuario usuario = _usuarioRepository.Read(id);
@@ -67,7 +62,7 @@ public class UsuarioController : Controller
     public IActionResult Update(Usuario usuario, int id)
     {
         _usuarioRepository.Update(usuario, id);
-        return View("Index", "Home");
+        return View("/Views/Home/Index.cshtml");
     }
 
     [HttpPost]
@@ -81,7 +76,7 @@ public class UsuarioController : Controller
         if(user == null)
         {
             ViewBag.Error = "Usuário/Senha inválidos";
-            return View();
+            return View("Index","Login");
         }
 
         HttpContext.Session.SetString("user", JsonSerializer.Serialize(user));
@@ -93,6 +88,6 @@ public class UsuarioController : Controller
     public ActionResult Logout()
     {
         HttpContext.Session.Clear();
-        return RedirectToAction("Index","Home");
+        return RedirectToAction("Index","Login");
     }
 }

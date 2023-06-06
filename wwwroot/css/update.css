@@ -1,27 +1,38 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
 }
 
-main{
+main,
+.header {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-main > img{
+main>img {
     height: fit-content;
     width: 50vw;
     box-shadow: 5px 0px 10px rgb(205, 205, 205);
 }
 
-.update-form{
+.header {
+    gap: 50px;
+}
+
+.header>img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.update-form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,49 +43,48 @@ main > img{
     padding: 30px 60px;
 }
 
-h1{
+h1 {
     font-size: 45px;
     font-weight: bold;
 }
 
-.update-section-input{
-    width: 11cm;
+.update-section-input {
+    width: 9cm;
     height: 40px;
     text-indent: 20px;
-    border: solid 1px rgb(235,235,235);
+    border: solid 1px rgb(235, 235, 235);
     border-radius: 15px;
-    background-color: rgb(245, 255, 244);
 }
 
-.update-form > button{
+.update-form>button {
     width: fit-content;
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 15px;
     padding: 10px 45px;
-    background:linear-gradient(to right, rgb(194, 255, 179), rgb(131, 255, 100));
-    border-radius: 30px;
+    background: linear-gradient(to right, rgb(194, 255, 179), rgb(131, 255, 100));
+    border-radius: 15px;
     transition: all 0.3s ease;
     list-style: none;
     text-transform: uppercase;
     border: none;
 }
 
-.update-form-sign-in{
+.update-form-sign-in {
     text-decoration: none;
     color: rgb(92, 202, 64);
 }
 
-.update-section-input::placeholder{
+.update-section-input::placeholder {
     opacity: .40;
     font-weight: 600;
 }
 
-.update-section-h2{
+.update-section-h2 {
     font-size: 20px;
 }
 
-:is(.update-form > button):hover{
+:is(.update-form > button):hover {
     transform: scale(1.1);
 }

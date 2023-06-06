@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-h1, .main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.main{
+    gap: 70px;
+}
+
+.main > img{
+    display: flex;
+    height: 250px;
+    width: 250px;
+    clip-path: circle(50%);
+    transition: all 0.3s ease;
+}
+
+:is(.main > img):hover{
+    filter: grayscale(80%);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.main-info-nome{
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.main-info-email{
+    font-size: 25px;
+}
+
+.update, .delete{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    list-style: none;
+    text-transform: uppercase;
+    border: none;
+    margin-block: 50px;
+    cursor: pointer;
+}
+
+:is(.update, .delete):hover{
+    color: white;
+    transform: scale(1.1);
+    opacity: 50%;
+}
+
+.update{
+    background:linear-gradient(to right, rgb(194, 255, 179), rgb(131, 255, 100));
+}
+.delete{
+    background:linear-gradient(to right, rgb(255, 179, 179), rgb(255, 100, 100));
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    gap: 30px;
+}
+
+#logout{
+    color: red;
+    font-size: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+#logout:hover{
+    transform: scale(1.1);
+    border-radius: 50%;
+    padding: 10px;
+    background-color: rgb(255, 232, 232);
+}

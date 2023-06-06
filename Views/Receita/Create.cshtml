@@ -1,3 +1,4 @@
+@model List<Categoria>
 <link rel="stylesheet" href="~/css/create.css" />
 @{
     ViewData["Title"] = "Nova Receita";
@@ -24,6 +25,21 @@
             </section>
 
             <input type="file" name="imagem" id="">
+
+            <section class="new-recipe-input">
+                <label for="Categoria">Categoria</label>
+                <select name="categoriaId" id="">
+                    @if(Model != null)
+                    {
+                        @foreach (Categoria categoria in Model)
+                        {
+                            <option value="@categoria.idCategoria">
+                                <p>@categoria.nome</p>
+                            </option>
+                        }
+                    }
+                </select>
+            </section>
 
             <button type="submit">Enviar</button>
         </form>
