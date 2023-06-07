@@ -1,3 +1,9 @@
+USE [master]
+GO
+
+DROP DATABASE IF EXISTS VeganoBD
+GO
+
 CREATE DATABASE VeganoBD;
 GO
 
@@ -11,7 +17,7 @@ CREATE TABLE Usuarios
 	email		VARCHAR(100)	NOT NULL,
 	senha		VARCHAR(20)		NOT NULL,
 	idade		INT				NOT NULL,
-	imagem		VARCHAR(100)	NOT NULL
+	imagem		VARBINARY(MAX)	NOT NULL
 )
 GO
 

@@ -2,30 +2,33 @@ using Microsoft.AspNetCore.Mvc;
 
 public class ReceitaController : Controller
 {
-    IReceitaRepository receitaRepository;
+    private readonly IReceitaRepository _receitaRepository;
+    private readonly ICategoriaRepository _categoriaRepository;
 
-    public ReceitaController(IReceitaRepository receitaRepository)
+    public ReceitaController(IReceitaRepository receitaRepository, ICategoriaRepository categoriaRepository)
     {
-        this.receitaRepository = receitaRepository;
+        this._receitaRepository = receitaRepository;
+        this._categoriaRepository = categoriaRepository;
     }
 
     [HttpGet]
     public IActionResult Create()
     {
-        return View();
+        List<Categoria> categorias = _categoriaRepository.Read();
+        return View(categorias);
     }
 
     [HttpPost]
     public IActionResult Create(Receita receita)
     {
-        receitaRepository.Create(receita);
+        _receitaRepository.Create(receita);
         return RedirectToAction("Index","Home");
     }
 
     [HttpGet]
     public IActionResult Details(int id)
     {
-        Receita receita = receitaRepository.Read(id);
+        Receita receita = _receitaRepository.Read(id);
         if (receita != null)
         {
             return View(receita);
@@ -35,14 +38,14 @@ public class ReceitaController : Controller
     
     public IActionResult Delete(int id)
     {
-        receitaRepository.Delete(id);
+        _receitaRepository.Delete(id);
         return RedirectToAction("Index","Home");
     }
 
     [HttpPost]
     public IActionResult Update(Receita receita, int id)
     {
-        receitaRepository.Update(receita, id);
+        _receitaRepository.Update(receita, id);
         return RedirectToAction("Index","Home");
     }
 

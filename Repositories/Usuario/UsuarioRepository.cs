@@ -1,3 +1,4 @@
+using System.Data;
 using Microsoft.Data.SqlClient;
 
 public class UsuarioRepository : Database, IUsuarioRepository
@@ -12,7 +13,17 @@ public class UsuarioRepository : Database, IUsuarioRepository
         cmd.Parameters.AddWithValue("@email",   usuario.email);
         cmd.Parameters.AddWithValue("@senha",   usuario.senha);
         cmd.Parameters.AddWithValue("@idade",   usuario.idade);
-        cmd.Parameters.AddWithValue("@imagem",  usuario.imagem);
+        
+        byte[] arquivoBytes;
+        using (MemoryStream ms = new MemoryStream())
+        {
+            usuario.imagem.CopyTo(ms);
+            arquivoBytes = ms.ToArray();
+        }
+        
+        SqlParameter parametroImagem = new SqlParameter("@imagem", SqlDbType.VarBinary, -1);
+        parametroImagem.Value = arquivoBytes;
+        cmd.Parameters.Add(parametroImagem);
 
         cmd.ExecuteNonQuery();
     }
@@ -46,7 +57,12 @@ public class UsuarioRepository : Database, IUsuarioRepository
             usuario.email =     reader.GetString(2);
             usuario.senha =     reader.GetString(3);
             usuario.idade =     reader.GetInt32(4);
-            usuario.imagem =    reader.GetString(5);
+            
+            if (!reader.IsDBNull(5))
+            {
+                byte[] arquivoBytes = (byte[])reader.GetValue(5);
+                usuario.imagem = new FormFile(new MemoryStream(arquivoBytes), 0, arquivoBytes.Length, "imagem", "imagem.jpg");
+            }
 
             usuarios.Add(usuario);
         }
@@ -70,7 +86,12 @@ public class UsuarioRepository : Database, IUsuarioRepository
             usuario.email =     reader.GetString(2);
             usuario.senha =     reader.GetString(3);
             usuario.idade =     reader.GetInt32(4);
-            usuario.imagem =    reader.GetString(5);
+            
+            if (!reader.IsDBNull(5))
+            {
+                byte[] arquivoBytes = (byte[])reader.GetValue(5);
+                usuario.imagem = new FormFile(new MemoryStream(arquivoBytes), 0, arquivoBytes.Length, "imagem", "imagem.jpg");
+            }
 
             return usuario;
         }
@@ -93,7 +114,18 @@ public class UsuarioRepository : Database, IUsuarioRepository
         cmd.Parameters.AddWithValue("@email",   usuario.email);
         cmd.Parameters.AddWithValue("@senha",   usuario.senha);
         cmd.Parameters.AddWithValue("@idade",   usuario.idade);
-        cmd.Parameters.AddWithValue("@imagem",  usuario.imagem);
+
+        byte[] arquivoBytes;
+        using (MemoryStream ms = new MemoryStream())
+        {
+            usuario.imagem.CopyTo(ms);
+            arquivoBytes = ms.ToArray();
+        }
+        
+        SqlParameter parametroImagem = new SqlParameter("@imagem", SqlDbType.VarBinary, -1);
+        parametroImagem.Value = arquivoBytes;
+        cmd.Parameters.Add(parametroImagem);
+
         cmd.Parameters.AddWithValue("@id",      id);
 
         cmd.ExecuteNonQuery();
@@ -107,18 +139,23 @@ public class UsuarioRepository : Database, IUsuarioRepository
         cmd.Parameters.AddWithValue("@email",       email);
         cmd.Parameters.AddWithValue("@password",    password);
 
-        Usuario usuario = new Usuario();
         SqlDataReader reader = cmd.ExecuteReader();
 
         if(reader.Read())
         {
+            Usuario usuario = new Usuario(); 
+               
             usuario.idUsuario = reader.GetInt32(0);
             usuario.nome =      reader.GetString(1);
             usuario.email =     reader.GetString(2);
             usuario.senha =     reader.GetString(3);
             usuario.idade =     reader.GetInt32(4);
-            usuario.imagem =    reader.GetString(5);
             
+            if (!reader.IsDBNull(5))
+            {
+                byte[] arquivoBytes = (byte[])reader.GetValue(5);
+                usuario.imagem = new FormFile(new MemoryStream(arquivoBytes), 0, arquivoBytes.Length, "imagem", "imagem.jpg");
+            }
             return usuario;
         }
         return null;

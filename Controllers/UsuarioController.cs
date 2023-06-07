@@ -3,11 +3,13 @@ using System.Text.Json;
 
 public class UsuarioController : Controller
 {
-    private IUsuarioRepository _usuarioRepository;
+    private readonly IUsuarioRepository _usuarioRepository;
+    private readonly IWebHostEnvironment _webHostEnvironment;
 
-    public UsuarioController(IUsuarioRepository usuarioRepository)
+    public UsuarioController(IUsuarioRepository usuarioRepository, IWebHostEnvironment webHostEnvironment)
     {
         this._usuarioRepository = usuarioRepository;
+        this._webHostEnvironment = webHostEnvironment;
     }
 
     [HttpGet]
@@ -23,10 +25,22 @@ public class UsuarioController : Controller
     }
 
     [HttpPost]
-    public IActionResult Create(Usuario usuario)
+    public async Task<IActionResult> Create(Usuario usuario)
     {
-        _usuarioRepository.Create(usuario);
-        return View("/Views/Login/Index.cshtml");
+        if(usuario.imagem != null && usuario.imagem.Length > 0)
+        {
+            string fileName = usuario.imagem.FileName;
+            string filePath = Path.Combine(_webHostEnvironment.WebRootPath, "img", fileName);
+
+            using(var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await usuario.imagem.CopyToAsync(stream);
+            }
+
+            _usuarioRepository.Create(usuario);
+            return View("/Views/Login/Index.cshtml");
+        }
+        return BadRequest("Nenhum arquivo foi Encontrado");
     }
 
     [HttpGet]
@@ -73,15 +87,15 @@ public class UsuarioController : Controller
 
         Usuario? user = _usuarioRepository.Login(email!, password!);
 
-        if(user == null)
+        if (user == null)
         {
             ViewBag.Error = "Usuário/Senha inválidos";
-            return View("Index","Login");
+            return View("Index", "Login");
         }
 
         HttpContext.Session.SetString("user", JsonSerializer.Serialize(user));
 
-        return RedirectToAction("Index","Home");
+        return RedirectToAction("Index", "Home");
     }
 
     [HttpGet]

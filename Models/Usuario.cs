@@ -5,5 +5,5 @@ public class Usuario
     public string email {get; set;}
     public string senha {get; set;}
     public int idade {get; set;}
-    public string imagem {get; set;}
+    public IFormFile imagem {get; set;}
 }
