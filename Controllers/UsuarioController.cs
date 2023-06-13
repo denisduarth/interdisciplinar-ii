@@ -4,12 +4,12 @@ using System.Text.Json;
 public class UsuarioController : Controller
 {
     private readonly IUsuarioRepository _usuarioRepository;
-    private readonly IWebHostEnvironment _webHostEnvironment;
+    private readonly IReceitaRepository _receitaRepository;
 
-    public UsuarioController(IUsuarioRepository usuarioRepository, IWebHostEnvironment webHostEnvironment)
+    public UsuarioController(IUsuarioRepository usuarioRepository, IReceitaRepository receitaRepository)
     {
         this._usuarioRepository = usuarioRepository;
-        this._webHostEnvironment = webHostEnvironment;
+        this._receitaRepository = receitaRepository;
     }
 
     [HttpGet]
@@ -25,30 +25,22 @@ public class UsuarioController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create(Usuario usuario)
+    public IActionResult Create(Usuario usuario)
     {
-        if(usuario.imagem != null && usuario.imagem.Length > 0)
-        {
-            string fileName = usuario.imagem.FileName;
-            string filePath = Path.Combine(_webHostEnvironment.WebRootPath, "img", fileName);
-
-            using(var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await usuario.imagem.CopyToAsync(stream);
-            }
-
-            _usuarioRepository.Create(usuario);
-            return View("/Views/Login/Index.cshtml");
-        }
-        return BadRequest("Nenhum arquivo foi Encontrado");
+        _usuarioRepository.Create(usuario);
+        return View("/Views/Login/Index.cshtml");
     }
 
     [HttpGet]
     public IActionResult Details(int id)
     {
-        Usuario usuario = _usuarioRepository.Read(id);
+        Usuario? usuario = _usuarioRepository.Read(id);
+
         if(usuario != null)
         {
+            List<Receita> receitas = _receitaRepository.GetByUsuarioId(usuario.idUsuario);
+            usuario.receitasCriadas = receitas;
+
             return View(usuario);
         }
         return NotFound();
@@ -76,7 +68,7 @@ public class UsuarioController : Controller
     public IActionResult Update(Usuario usuario, int id)
     {
         _usuarioRepository.Update(usuario, id);
-        return View("/Views/Home/Index.cshtml");
+        return RedirectToAction("Details", new{id = id});
     }
 
     [HttpPost]
@@ -85,14 +77,7 @@ public class UsuarioController : Controller
         string? email = form["email"];
         string? password = form["password"];
 
-        Usuario? user = _usuarioRepository.Login(email!, password!);
-
-        if (user == null)
-        {
-            ViewBag.Error = "Usuário/Senha inválidos";
-            return View("Index", "Login");
-        }
-
+        Usuario? user =  _usuarioRepository.Login(email!, password!);
         HttpContext.Session.SetString("user", JsonSerializer.Serialize(user));
 
         return RedirectToAction("Index", "Home");

@@ -13,17 +13,7 @@ public class UsuarioRepository : Database, IUsuarioRepository
         cmd.Parameters.AddWithValue("@email",   usuario.email);
         cmd.Parameters.AddWithValue("@senha",   usuario.senha);
         cmd.Parameters.AddWithValue("@idade",   usuario.idade);
-        
-        byte[] arquivoBytes;
-        using (MemoryStream ms = new MemoryStream())
-        {
-            usuario.imagem.CopyTo(ms);
-            arquivoBytes = ms.ToArray();
-        }
-        
-        SqlParameter parametroImagem = new SqlParameter("@imagem", SqlDbType.VarBinary, -1);
-        parametroImagem.Value = arquivoBytes;
-        cmd.Parameters.Add(parametroImagem);
+        cmd.Parameters.AddWithValue("@imagem",   usuario.imagem);
 
         cmd.ExecuteNonQuery();
     }
@@ -57,12 +47,7 @@ public class UsuarioRepository : Database, IUsuarioRepository
             usuario.email =     reader.GetString(2);
             usuario.senha =     reader.GetString(3);
             usuario.idade =     reader.GetInt32(4);
-            
-            if (!reader.IsDBNull(5))
-            {
-                byte[] arquivoBytes = (byte[])reader.GetValue(5);
-                usuario.imagem = new FormFile(new MemoryStream(arquivoBytes), 0, arquivoBytes.Length, "imagem", "imagem.jpg");
-            }
+            usuario.imagem =    reader.GetString(5);
 
             usuarios.Add(usuario);
         }
@@ -86,13 +71,7 @@ public class UsuarioRepository : Database, IUsuarioRepository
             usuario.email =     reader.GetString(2);
             usuario.senha =     reader.GetString(3);
             usuario.idade =     reader.GetInt32(4);
-            
-            if (!reader.IsDBNull(5))
-            {
-                byte[] arquivoBytes = (byte[])reader.GetValue(5);
-                usuario.imagem = new FormFile(new MemoryStream(arquivoBytes), 0, arquivoBytes.Length, "imagem", "imagem.jpg");
-            }
-
+            usuario.imagem =    reader.GetString(5);
             return usuario;
         }
         return null;
@@ -114,18 +93,7 @@ public class UsuarioRepository : Database, IUsuarioRepository
         cmd.Parameters.AddWithValue("@email",   usuario.email);
         cmd.Parameters.AddWithValue("@senha",   usuario.senha);
         cmd.Parameters.AddWithValue("@idade",   usuario.idade);
-
-        byte[] arquivoBytes;
-        using (MemoryStream ms = new MemoryStream())
-        {
-            usuario.imagem.CopyTo(ms);
-            arquivoBytes = ms.ToArray();
-        }
-        
-        SqlParameter parametroImagem = new SqlParameter("@imagem", SqlDbType.VarBinary, -1);
-        parametroImagem.Value = arquivoBytes;
-        cmd.Parameters.Add(parametroImagem);
-
+        cmd.Parameters.AddWithValue("@imagem",  usuario.imagem);
         cmd.Parameters.AddWithValue("@id",      id);
 
         cmd.ExecuteNonQuery();
@@ -150,12 +118,8 @@ public class UsuarioRepository : Database, IUsuarioRepository
             usuario.email =     reader.GetString(2);
             usuario.senha =     reader.GetString(3);
             usuario.idade =     reader.GetInt32(4);
+            usuario.imagem =    reader.GetString(5);
             
-            if (!reader.IsDBNull(5))
-            {
-                byte[] arquivoBytes = (byte[])reader.GetValue(5);
-                usuario.imagem = new FormFile(new MemoryStream(arquivoBytes), 0, arquivoBytes.Length, "imagem", "imagem.jpg");
-            }
             return usuario;
         }
         return null;

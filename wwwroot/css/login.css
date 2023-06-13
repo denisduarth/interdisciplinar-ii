@@ -34,8 +34,9 @@ h1 {
     width: 9cm;
     height: 40px;
     text-indent: 20px;
-    border: solid 1px rgb(235, 235, 235);
+    border: solid 3px rgb(235, 235, 235);
     border-radius: 15px;
+    transition: all 0.3s ease-in-out;
 }
 
 .login-section-h2 {
@@ -75,6 +76,7 @@ h1 {
 }
 
 .login-form-sign-in:hover {
+    transform: scale(1.1);
     color: rgb(92, 202, 64);
     opacity: .50;
 }
@@ -82,4 +84,10 @@ h1 {
 .login-section-input::placeholder {
     font-weight: 500;
     opacity: .30;
+}
+
+.login-section-input:focus{
+    transform: scale(1.1);
+    outline-color: rgb(131, 255, 100);
+    margin-top: 10px;
 }

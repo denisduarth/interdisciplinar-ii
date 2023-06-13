@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="~/css/recipe-index.css">
+@model List<Receita>
+@{
+    ViewData["Title"] = "Receitas";   
+}
+
+<main>
+    <h1 class="main-h1">Receitas</h1>
+
+    <div class="recipes">
+        @if(Model != null)
+        {
+            foreach (Receita receita in Model)
+            {
+                <a class="recipe" href="/receita/details/@receita.idReceita">
+                    <img src="~/img/Receita/@receita.imagem" alt="">
+                    <h2 class="recipe-h2">@receita.nome</h2>
+                    <p> Criada em: @receita.dataPostagem</p>
+                </a>
+            }
+        }
+    </div>
+</main>

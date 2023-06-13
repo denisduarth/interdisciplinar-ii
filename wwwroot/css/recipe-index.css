@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.main-h1{
+    font-family: "Inter";
+    text-transform: uppercase;
+    font-size: 35px;
+    background-color: #E6E894;
+    padding-inline: 450px;
+}
+
+.recipe{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align:start;
+    text-decoration: none;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border: solid 1px rgb(199, 199, 199);
+    border-radius: 20px;
+    padding-inline: 20px;
+    padding-top: 10px;
+    box-shadow: 0px 10px 10px rgb(199, 199, 199);
+    background-color: white;
+}
+
+.recipe img{
+    display: flex;
+    width: 220px;
+    height:200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+.recipe h2{
+    color: rgb(65,65,65);
+    font-size: 16px;
+    font-family: "Inter";
+    text-transform: uppercase;
+}
+
+.recipe p{
+    font-size: 12px;
+    color: rgb(94, 208, 65);
+    font-weight: bold;
+}
+
+.recipes{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 100px;
+}
+
+.recipe:hover{
+    transform: scale(1.1);
+    opacity: .70;
+}

@@ -15,6 +15,7 @@ public class CategoriaRepository : Database, ICategoriaRepository
 
                 categoria.idCategoria = reader.GetInt32(0);
                 categoria.nome =        reader.GetString(1);
+                categoria.imagem =        reader.GetString(2);
 
                 categorias.Add(categoria);
             }
@@ -35,6 +36,7 @@ public class CategoriaRepository : Database, ICategoriaRepository
 
                 categoria.idCategoria = reader.GetInt32(0);
                 categoria.nome =        reader.GetString(1);
+                categoria.imagem =        reader.GetString(2);
 
                 return categoria;
             }
@@ -45,10 +47,11 @@ public class CategoriaRepository : Database, ICategoriaRepository
     public void Create(Categoria categoria)
     {
        SqlCommand cmd = new SqlCommand();
-       cmd.CommandText = "INSERT INTO Categorias VALUES (@nome)";
+       cmd.CommandText = "INSERT INTO Categorias VALUES (@nome, @imagem)";
        cmd.Connection = conn;
 
        cmd.Parameters.AddWithValue("@nome", categoria.nome);
+       cmd.Parameters.AddWithValue("@imagem", categoria.imagem);
        cmd.ExecuteNonQuery();
     }
     
@@ -61,8 +64,9 @@ public class CategoriaRepository : Database, ICategoriaRepository
     
     public void Update(Categoria categoria, int id)
     {
-       SqlCommand cmd = new SqlCommand("UPDATE Categorias SET nome = @nome WHERE idCategoria = @id", conn);
+       SqlCommand cmd = new SqlCommand("UPDATE Categorias SET nome = @nome, imagem = @imagem WHERE idCategoria = @id", conn);
        cmd.Parameters.AddWithValue("@nome", categoria.nome);
+       cmd.Parameters.AddWithValue("@imagem", categoria.imagem);
        cmd.Parameters.AddWithValue("@id", id);
        cmd.ExecuteNonQuery();
     }

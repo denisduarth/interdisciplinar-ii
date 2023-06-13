@@ -23,7 +23,7 @@
   outline: none;
 }
 
-.navbar-top-search:focus-within[b-lqecrp9pge]{
+.navbar-top-search:focus-within[b-lqecrp9pge] {
   transform: scale(1.1);
 }
 
@@ -40,51 +40,56 @@
 .navbar-login>a[b-lqecrp9pge] {
   color: rgb(0, 95, 0);
   text-decoration: none;
-  font-weight: bold;
-  border-radius: 15px;
-  transition: all 0.3s ease;
   list-style: none;
-  text-transform: uppercase;
 }
 
-:is(.navbar-top-item, .navbar-bottom, .navbar-top-items, .navbar-bottom-items, .material-symbols-rounded)[b-lqecrp9pge] {
+.navbar-login[b-lqecrp9pge]{
+  gap: 0px;
+}
+
+:is(.navbar-top-item,
+  .navbar-bottom,
+  .navbar-top-items,
+  .navbar-bottom-items,
+  .material-symbols-rounded)[b-lqecrp9pge] {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.navbar-top-item[b-lqecrp9pge],
-.navbar-bottom-item[b-lqecrp9pge],
-.navbar-login[b-lqecrp9pge],
-.navbar-top-photo[b-lqecrp9pge],
-.navbar-top-search[b-lqecrp9pge] {
-  transition: all 0.2s ease-in-out;
+:is(.navbar-top-item,
+.navbar-bottom-item,
+.navbar-login,
+.navbar-top-photo,
+.navbar-top-search)[b-lqecrp9pge]{
+  transition: all 0.3s ease;
 }
 
-.navbar-top-item>a[b-lqecrp9pge],
-.material-symbols-rounded[b-lqecrp9pge] {
+.navbar-top-item a[b-lqecrp9pge],
+.material-symbols-rounded[b-lqecrp9pge],
+.navbar-login a[b-lqecrp9pge] {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 30px;
-}
-
-:is(.navbar-top-item, .navbar-login):hover[b-lqecrp9pge] {
-  transform: scale(1.2);
-  background-color: rgb(114, 238, 83);
-  border-radius: 50%;
-  padding: 8px;
-}
-
-.navbar-top-photo[b-lqecrp9pge] {
-  display: flex;
-  clip-path: circle(40%);
-  height: 50px;
-  width: 50px;
+  gap: 0;
 }
 
 .navbar-top-photo:hover[b-lqecrp9pge] {
-  scale: 1.2;
+  transform: scale(1.1);
 }
+
+.navbar-top-item:hover[b-lqecrp9pge],
+.navbar-login:hover[b-lqecrp9pge]{
+  background-color: rgb(81, 193, 53, 0.4);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/*
+  ----------------------------------------------------------------------------------------
+                                      NAVBAR BOTTOM
+  ----------------------------------------------------------------------------------------
+*/
 
 .navbar-bottom[b-lqecrp9pge] {
   width: 100vw;
@@ -98,6 +103,7 @@
   gap: 150px;
   font-weight: bold;
 }
+
 
 .navbar-bottom-item[b-lqecrp9pge] {
   text-decoration: none;

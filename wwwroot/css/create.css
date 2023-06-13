@@ -5,40 +5,62 @@
 }
 
 main{
+    margin-top: 30px;
+}
+
+header > img{
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+header, .new-recipe-input{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-main > img{
-    width: 50vw;
-    height: 50vh;
-    object-fit: contain;
-}
-
-.new-recipe{
+.new-recipe-form{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+header{
+    gap: 50px;
+}
+
+.new-recipe-form{
     flex-direction: column;
-    gap: 20px;
+    gap: 70px;
     margin-top: 20px;
 }
 
-.new-recipe-input > textarea{
-    border-radius: 15px;
-    border: solid 1px rgb(235,235,235);
-    text-align: start;
-    text-indent: 30px;
-    padding-top: 10px;
+.new-recipe-input{
+    flex-direction: column;
 }
 
-.new-recipe-input > input{
+.new-recipe-label{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.new-recipe-input > textarea{
+    border-radius: 40px;
+    border: solid 4px rgb(235,235,235);
+    text-align: start;
+    text-indent: 30px;
+    padding-top: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.new-recipe-input > input, select{
     width: 15cm;
     height:40px;
     border-radius: 15px;
-    border: solid 1px rgb(235,235,235);
+    border: solid 4px rgb(235,235,235);
     text-indent: 30px;
+    transition: all 0.3s ease-in-out;
 }
 
 button[type="submit"]{
@@ -56,11 +78,17 @@ button[type="submit"]{
 }
 
 .new-recipe-h1{
-    font-size: 35px;
+    font-size: 55px;
     font-weight: bold;
 }
 
 :is(.new-recipe-input > textarea, input)::placeholder{
     font-weight: 600;
     opacity: .30;
+}
+
+:is(.new-recipe-input > textarea, input):focus{
+    outline-color: rgb(131, 255, 100);
+    margin-top: 20px;
+    transform: scale(1.1);
 }

@@ -6,23 +6,65 @@
 
 <main>
     <aside class="main">
-        <img src="~/@Model.imagem" alt="" srcset="">
+        <img src="~/img/Usuario/@Model.imagem" alt="" srcset="">
         <div class="main-info">
             <div class="info">
                 <h1 class="main-info-nome">@Model.nome</h1>
-                 <a href="/usuario/logout">
+                <a href="/usuario/logout">
                     <span class="material-symbols-rounded" id="logout">logout</span>
                 </a>
             </div>
             <h1 class="main-info-email">@Model.email</h1>
 
             <div class="buttons">
-                <a href="/usuario/update/@Model.idUsuario" class="update">Editar Perfil</a>
-                <a onclick="confirmDelete()" class="delete">Excluir Conta</a>
+                <a href="/usuario/update/@Model.idUsuario" class="update">
+                    <span class="material-symbols-rounded">manage_accounts</span>
+                    Editar Perfil
+                </a>
+
+                <a onclick="confirmDelete()" class="delete" href="#">
+                    <span class="material-symbols-rounded">delete</span>
+                    Excluir Conta
+                </a>
             </div>
         </div>
     </aside>
 </main>
+
+<footer class="your-recipes">
+    <header class="your-recipes-header">
+        <h1>Suas Receitas</h1>
+        <a href="/receita/create" class="add-recipe">+</a>
+    </header>
+
+    <div class="recipes">
+        @foreach (Receita receita in Model.receitasCriadas)
+        {
+            <a href ="/receita/details/@receita.idReceita" class="recipe">
+                
+                <div class="content"> 
+                    <footer class="recipe-footer">
+                        <p>Criada em: @receita.dataPostagem</p>
+                        <h2>@receita.nome</h2>
+                        
+                    </footer>
+                    
+                    <img src="~/img/Receita/@receita.imagem">
+                </div>
+                
+            </a>
+
+            <div class="options">
+                <a href="/receita/update/@receita.idReceita" class="options-edit">Editar</a>
+                <a href="/receita/delete/@receita.idReceita" class="options-delete">Deletar</a>
+            </div>
+        }
+    </div>
+</footer>
+
+@*
+   Código Javascript para confirmar se o usuário realmente deseja deletar sua conta 
+*@
 <script>
     function confirmDelete()
     {

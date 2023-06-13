@@ -11,6 +11,17 @@
     margin: 50px;
 }
 
+.main{
+    gap: 60px;
+}
+
+.main img{
+    display: flex;
+    width: 450px;
+    height: fit-content;
+    object-fit: cover;
+}
+
 .register-form{
     display: flex;
     align-items: center;
@@ -29,8 +40,9 @@ h1{
     width: 9cm;
     height: 40px;
     text-indent: 20px;
-    border: solid 1px rgb(235,235,235);
+    border: solid 4px rgb(235,235,235);
     border-radius: 15px;
+    transition: all 0.3s ease-in-out;
 }
 
 .register-form > button{
@@ -56,7 +68,6 @@ h1{
 .register-section-input::placeholder{
     opacity: .40;
     font-weight: 600;
-    color: rgb(29, 114, 21);;
 }
 
 .register-section-h2{
@@ -65,4 +76,9 @@ h1{
 
 :is(.register-form > button):hover{
     transform: scale(1.1);
+}
+
+.register-section-input:focus{
+    transform: scale(1.1);
+    outline-color: rgb(131, 255, 100);
 }

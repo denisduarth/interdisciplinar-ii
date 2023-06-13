@@ -1,6 +1,16 @@
 ﻿<link rel="stylesheet" href="~/css/index.css">
-
+@model List<Receita>
+@using Microsoft.AspNetCore.Http
+@using System.Text.Json
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 @{
+    Usuario? user = null;
+
+    string? session = HttpContextAccessor.HttpContext?.Session.GetString("user");
+    if(session != null)
+    {
+        user = JsonSerializer.Deserialize<Usuario>(session);
+    }
     ViewData["Title"] = "Home";
 }
 
@@ -8,24 +18,85 @@
     @* Receitas do usuário e recomendações *@
     
     <section class="your-recipes">
-        <h1 class="main-h1">Suas Receitas</h1>
-        <a href="/receita/create" class="add-recipe">Adicionar Receita</a>
+        @if(user != null)
+        {
+            <img src="~/img/Usuario/@user.imagem" alt="" srcset="" class="your-recipes-img">
+        }
+        <h1 class="main-h1">
+            Suas Receitas
+        </h1>
     </section>
 
-    <section>
-        @if(Model != null)
+    <section class="recipes">
+        @if(session != null && user != null) 
         {
-            @foreach (Usuario u in Model)
+            if(user.receitasCriadas == null)
             {
-                <p>@u.idUsuario</p>
-                <p>@u.nome</p>
-                <p>@u.email</p>
-                <p>@u.senha</p>
-                <p>@u.idade</p>
-            }  
+                <h2>Sem receitas? Crie uma agora!</h2>
+            }
+            else
+            {
+                foreach (Receita receita in user.receitasCriadas)
+                {
+                    <a href="/receita/details/@receita.idReceita" class="recipe">
+                        <img src="~/img/Receita/@receita.imagem" alt="">
+                        <h2>@receita.nome</h2>
+                        <p>Criada em: @receita.dataPostagem</p>
+                    </a>
+                }  
+            } 
         }
     </section>
 
-    <h1 class="main-h1">Para você</h1>
-    <h1 class="main-h1">Em Alta &#10022;</h1>
+
+    <section class="high">
+        <h1 class="main-h1">Em Alta &#10022;</h1>
+        
+        <div class="recipes">
+            @if(Model != null)
+            {
+                @for (int i = 0; i < Model.Count &&  i < 4; i++)
+                {
+                    <a href="/receita/details/@Model[i].idReceita" class="recipe">
+                        <img src="~/img/Receita/@Model[i].imagem" alt="">
+                        <h2>@Model[i].nome</h2>
+                        <p>Criada em: @Model[i].dataPostagem</p>
+                    </a>
+                }
+            }
+        </div>
+    </section>
+
+    <section class="for-you">
+        <h1 class="main-h1">Para você</h1>
+
+        <div class="recipes">
+            @if(Model != null)
+            {
+                @for (int i = 0; i < Model.Count &&  i < 8; i++)
+                {
+                    <a href="/receita/details/@Model[i].idReceita" class="recipe">
+                        <img src="~/img/Receita/@Model[i].imagem" alt="">
+                        <h2>@Model[i].nome</h2>
+                        <p>Criada em: @Model[i].dataPostagem</p>
+                    </a>
+                }
+            }
+        </div>
+    </section>
+
+    <section class="categories">
+        <h1 class="main-h1">Categorias</h1>
+
+        @if (ViewData["Categorias"] is List<Categoria> categorias)
+        {
+            for (int i =0; i < categorias.Count &&  i < 6; i++)
+            {
+                <a href="/receita/getByCategoria/@categorias[i].idCategoria" class="category">
+                    <h2>@categorias[i].nome</h2>
+                    <img src="~/img/Categoria/@categorias[i].imagem" alt="">
+                </a>
+            }
+        }
+    </section>
 </main>

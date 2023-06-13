@@ -6,41 +6,64 @@
 
 @* Aba de criação de receitas na index *@
     
-    <main>
-        <img src="https://www.vegantravelagent.com/wp-content/uploads/2021/12/healthy-vegan-food-restaurant-in-london-vegan-food-plant-produce-dish-meal-transparent-png-2439241-1024x1006.png" alt="" srcset="">
+<main>
+    <header>
+        <h1 class="new-recipe-h1">Nova receita</h1>
+        <img src="https://www.vegantravelagent.com/wp-content/uploads/2021/12/healthy-vegan-food-restaurant-in-london-vegan-food-plant-produce-dish-meal-transparent-png-2439241-1024x1006.png" alt="" srcset="">  
+    </header>
+    
+    <form action="/receita/create" method="post" class="new-recipe-form">
+        <section class="new-recipe-input">
+            <label for="" class="new-recipe-label">
+                <span class="material-symbols-rounded">badge</span>
+                Nome da Receita
+            </label>
+            <input type="text" name="nome" placeholder="Nome da Receita" class="input-input1">
+        </section>
+
+        <section class="new-recipe-input">
+            <label for="" class="new-recipe-label">
+                <span class="material-symbols-rounded">kitchen</span>    
+                Ingredientes
+            </label>
+            <textarea name="ingredientes" id="" cols="75" rows="15" placeholder="Lista de Ingredientes"></textarea>
+        </section>
+
+        <section class="new-recipe-input">
+            <label for="" class="new-recipe-label">
+                <span class="material-symbols-rounded">description</span>  
+                Descreva o modo de preparo
+            </label>
+            
+            <textarea name="modoPreparo" id="" cols="75" rows="15" placeholder="Modo de Preparo"></textarea>
+        </section>
         
-        <form action="/receita/create" method="post" class="new-recipe">
-            <h1 class="new-recipe-h1">Nova receita</h1>
+        <section class="new-recipe-input">
+            <label for="" class="new-recipe-label">
+                <span class="material-symbols-rounded">image</span>       
+                Nome da foto da receita
+            </label>
 
-            <section class="new-recipe-input">
-                <input type="text" name="nome" placeholder="Nome da Receita" class="input-input1">
-            </section>
+            <input type="text" name="imagem" placeholder="Nome da foto" class="input-input1">
+        </section>
 
-            <section class="new-recipe-input">
-                <textarea name="ingredientes" id="" cols="75" rows="10" placeholder="Lista de Ingredientes"></textarea>
-            </section>
+        <section class="new-recipe-input">
+            <label for="Categoria" class="new-recipe-label">
+                <span class="material-symbols-rounded">restaurant</span>      
+                Categoria
+            </label>
 
-            <section class="new-recipe-input">
-                <textarea name="modoPreparo" id="" cols="75" rows="10" placeholder="Modo de Preparo"></textarea>
-            </section>
-
-            <input type="file" name="imagem" id="">
-
-            <section class="new-recipe-input">
-                <label for="Categoria">Categoria</label>
-                <select name="categoriaId" id="">
-                    @if(Model != null)
+            <select name="categoriaId" id="">
+                @if(Model != null)
+                {
+                    @foreach (Categoria categoria in Model)
                     {
-                        @foreach (Categoria categoria in Model)
-                        {
-                            <option value="@categoria.idCategoria">
-                                <p>@categoria.nome</p>
-                            </option>
-                        }
+                        <option value="@categoria.idCategoria">@categoria.nome</option>
                     }
-                </select>
-            </section>
+                }
+            </select>
+        </section>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </main>
+        <button type="submit">Enviar</button>
+    </form>
+</main>

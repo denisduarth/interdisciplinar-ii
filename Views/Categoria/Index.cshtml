@@ -1,15 +1,51 @@
+<link rel="stylesheet" href="~/css/categories.css">
 @model List<Categoria>
 @{
     ViewData["Title"] = "Categorias";
 }
 
-<h1>Categorias</h1>
-<a href="/categoria/create">Criar</a>
+<main>
+    <h1 class="main-h1">
+        Categorias
+    </h1>
+    <div class="grid">
+        @if(Model != null)
+        {
+            @for (int i = 0; i < Model.Count &&  i < 6; i++)
+            {
+                <a href="/receita/getByCategoria/@Model[i].idCategoria">
+                    <section class="categories-section">
+                        <h1>@Model[i].nome</h1>
+                        <img src="~/img/Categoria/@Model[i].imagem">
+                    </section>
+                </a>
+            }
 
-@if(Model != null)
-{
-    @foreach (Categoria categoria in Model)
-    {
-        <h1>@categoria.nome</h1>
-    }
-}
+        }
+    </div>
+</main>
+
+<footer>
+    <footer class="categories-footer">
+        <h1 class="categories-h1">
+            Não encontrou sua categoria?
+            <br> 
+            Procure aqui
+        </h1>
+        
+        <section class="categories-input">
+            <select name="" id="">
+                @if(Model != null)
+                {
+                    @foreach (Categoria categoria in Model)
+                    {
+                        <option value="@categoria.idCategoria">
+                            <p>@categoria.nome</p>
+                        </option>
+                    }
+                }
+            </select>
+        </section>
+    </footer>
+
+</footer>

@@ -26,7 +26,7 @@ public class CategoriaController : Controller
     public IActionResult Create(Categoria categoria)
     {
         _categoriaRepository.Create(categoria);
-        return View("Index");
+        return RedirectToAction("Index");
     }
 
     public IActionResult Delete(int id)

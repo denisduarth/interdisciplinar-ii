@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.main-h1, .main{
+.main-h1, .main, .recipe-footer, .your-recipes, .info, .main-info-email{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,33 +12,38 @@
 }
 
 .main{
-    gap: 70px;
+    gap: 10px;
 }
 
 .main > img{
     display: flex;
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     clip-path: circle(50%);
     transition: all 0.3s ease;
+    object-fit: cover;
 }
 
-:is(.main > img):hover{
-    filter: grayscale(80%);
-    transform: scale(1.1);
-    cursor: pointer;
+.main-info{
+    margin-top: 0px;
 }
 
 .main-info-nome{
-    font-size: 100px;
+    font-size: 55px;
     font-weight: bold;
 }
 
 .main-info-email{
+    margin-top: 0px;
     font-size: 25px;
 }
 
-.update, .delete{
+.info{
+    margin-top: 0px;
+    gap: 10px;
+}
+
+.update, .delete, #logout{
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -53,7 +58,7 @@
     cursor: pointer;
 }
 
-:is(.update, .delete):hover{
+:is(.update, .delete, #logout,.options-delete, .options-edit):hover{
     color: white;
     transform: scale(1.1);
     opacity: 50%;
@@ -66,23 +71,121 @@
     background:linear-gradient(to right, rgb(255, 179, 179), rgb(255, 100, 100));
 }
 
+#logout.material-symbols-rounded{
+    font-size: 30px;
+    background:linear-gradient(to right, rgb(255, 121, 121), rgb(255, 36, 36));
+}
+
 .buttons{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: fit-content;
     gap: 30px;
 }
 
-#logout{
-    color: red;
-    font-size: 50px;
-    transition: all 0.3s ease-in-out;
+.buttons span, .your-recipes-header, .options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#logout:hover{
+.your-recipes{
+    flex-direction: column;
+}
+
+.your-recipes-header{
+    gap: 30px;
+}
+
+.add-recipe{
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.add-recipe:hover{
+    transform: scale(1.4);
+    color: rgb(131, 255, 100);
+}
+
+.recipes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+}
+
+.recipe-footer{
+    flex-direction: column;
+}
+
+.recipe-footer p{
+    font-size: 12px;
+    color: rgb(72, 185, 44);
+    font-weight: bold;
+}
+
+.recipe-footer h2{
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(65, 65, 65);
+}
+
+.recipe img{
+    display: flex;
+    max-width: 300px;
+    height: fit-content;
+    border-radius: 40px;
+}
+
+.recipe{
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: black;
+    flex-direction: column;
+}
+
+.recipe:hover{
     transform: scale(1.1);
-    border-radius: 50%;
+    color: rgb(95, 95, 95);
+    opacity: .70;
+}
+
+.options{
     padding: 10px;
-    background-color: rgb(255, 232, 232);
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.options button{
+    width: 40px;
+    border: none;
+    border-radius: 20px;
+    margin-inline: 15px;
+    padding: 5px 20px;
+}
+
+.options-delete, .options-edit{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    list-style: none;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.options-delete{
+    background:linear-gradient(to right, rgb(255, 179, 179), rgb(255, 100, 100));
+}
+
+.options-edit{
+    background:linear-gradient(to right, rgb(255, 224, 112), rgb(255, 187, 0));
 }

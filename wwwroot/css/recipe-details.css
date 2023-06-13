@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+}
+
+main img{
+    width: 100vw;
+    height: 300px;
+    object-fit: cover;
+    filter: blur(1px) drop-shadow(0px 10px 8px rgb(180, 180, 180));
+}
+
+.recipe-h1{
+    font-size: 55px;
+    font-weight: bold;
+    background-color: #E6E894;
+}
+
+.recipe-dataPostagem{
+    font-weight: bold;
+    color:rgb(94, 208, 65);
+}
+
+:is(.ingredientes, .modoPreparo){
+    margin-top: 40px;
+}
+
+:is(.ingredientes, .modoPreparo) h1{
+    background-color: #E6E894;
+    padding-inline: 450px;
+}
+
+:is(.ingredientes, .modoPreparo) p{
+    font-size: 30px;
+    text-align: center;
+}   
+

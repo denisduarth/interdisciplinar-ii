@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\css\\about.css"
     },
     {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\categories.css",
+      "PackagePath": "staticwebassets\\css\\categories.css"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\create-category.css",
+      "PackagePath": "staticwebassets\\css\\create-category.css"
+    },
+    {
       "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\create.css",
       "PackagePath": "staticwebassets\\css\\create.css"
     },
@@ -25,6 +33,18 @@
       "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\recipe-details.css",
+      "PackagePath": "staticwebassets\\css\\recipe-details.css"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\recipe-index.css",
+      "PackagePath": "staticwebassets\\css\\recipe-index.css"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\recipe-update.css",
+      "PackagePath": "staticwebassets\\css\\recipe-update.css"
+    },
+    {
       "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\css\\register.css",
       "PackagePath": "staticwebassets\\css\\register.css"
     },
@@ -39,6 +59,54 @@
     {
       "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\Categoria\\acompanhamentos.jpg",
+      "PackagePath": "staticwebassets\\img\\Categoria\\acompanhamentos.jpg"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\Categoria\\aperitivos.jpg",
+      "PackagePath": "staticwebassets\\img\\Categoria\\aperitivos.jpg"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\Categoria\\bebidas.jpg",
+      "PackagePath": "staticwebassets\\img\\Categoria\\bebidas.jpg"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\Categoria\\churrasco.jpg",
+      "PackagePath": "staticwebassets\\img\\Categoria\\churrasco.jpg"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\Categoria\\refeicoes.jpg",
+      "PackagePath": "staticwebassets\\img\\Categoria\\refeicoes.jpg"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\Categoria\\salgados.jpg",
+      "PackagePath": "staticwebassets\\img\\Categoria\\salgados.jpg"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\Categoria\\sobremesas.jpg",
+      "PackagePath": "staticwebassets\\img\\Categoria\\sobremesas.jpg"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\Receita\\brigadeiro-vegano.jpg",
+      "PackagePath": "staticwebassets\\img\\Receita\\brigadeiro-vegano.jpg"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\Receita\\salada-de-batatas.jpg",
+      "PackagePath": "staticwebassets\\img\\Receita\\salada-de-batatas.jpg"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\Receita\\salada_de_frutas.jpg",
+      "PackagePath": "staticwebassets\\img\\Receita\\salada_de_frutas.jpg"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\Receita\\strogonoff.jpg",
+      "PackagePath": "staticwebassets\\img\\Receita\\strogonoff.jpg"
+    },
+    {
+      "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\Receita\\suco-maracuja.jpg",
+      "PackagePath": "staticwebassets\\img\\Receita\\suco-maracuja.jpg"
     },
     {
       "Id": "C:\\COISAS DO DENIS\\FATEC\\INTER\\Interdisciplinar\\wwwroot\\img\\Usuario\\foto.jpg",

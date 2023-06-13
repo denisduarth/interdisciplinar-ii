@@ -1,12 +1,13 @@
 using Microsoft.Data.SqlClient;
+using System;
 
 public abstract class Database : IDisposable
 {
     protected SqlConnection conn;
 
     public Database()
-    {
-        string connectionString = "Data Source=LAB0402\\MSSQLSERVER02; Initial Catalog=VeganoBD; Integrated Security=true; TrustServerCertificate=true";
+    {   
+        string connectionString = $"Data Source=DESKTOP-A7IQO85\\SQLDENIS; Initial Catalog=VeganoBD; Integrated Security=true; TrustServerCertificate=true; MultipleActiveResultSets=True";
 
         conn = new SqlConnection(connectionString);
         conn.Open();

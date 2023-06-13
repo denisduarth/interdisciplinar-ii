@@ -5,11 +5,16 @@
 }
 
 <main>
+    <div class="header">
+        <h1>
+            Editar
+            <br>
+            Perfil
+        </h1>
+        <img src="~/img/Usuario/@Model.imagem" alt="" srcset="">
+    </div>
+
     <form action="/usuario/update/@Model.idUsuario" method="post" class="update-form">
-        <div class="header">
-            <img src="~/@Model.imagem" alt="" srcset="">
-            <h1>Editar Perfil</h1>
-        </div>
         
         <section class="update-section">
             <h2 class="update-section-h2">Alterar Nome:</h2>
@@ -36,6 +41,8 @@
             <input type="text" class="update-section-input" placeholder="Nova foto" name="imagem" value="@Model.imagem">
         </section>
 
-        <button type="submit">Salvar Alterações</button>
+        <button type="submit">
+            Salvar Alterações
+        </button>
     </form>
 </main>

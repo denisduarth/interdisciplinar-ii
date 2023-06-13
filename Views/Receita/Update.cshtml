@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="~/css/recipe-update.css">
+@model Receita
+@{
+    ViewData["Title"] = $"Atualizar receita {Model.nome}";
+}
+    
+<main>
+    <header>
+        <h1 class="update-recipe-h1">Editar receita</h1>
+        <img src="~/img/Receita/@Model.imagem" alt="" srcset="">
+    </header>
+    
+    <form action="/receita/update/@Model.idReceita" method="post" class="update-recipe-form">
+        <section class="update-recipe-input">
+            <label for="" class="update-recipe-label">
+                <span class="material-symbols-rounded">badge</span>
+                Nome da Receita
+            </label>
+
+            <input type="text" name="nome" placeholder="Nome da Receita" class="input-input1" value="@Model.nome">
+        </section>
+
+        <section class="update-recipe-input">
+            <label for="" class="update-recipe-label">
+                <span class="material-symbols-rounded">kitchen</span>    
+                Ingredientes
+            </label>
+
+            <textarea name="ingredientes" id="" cols="75" rows="15" placeholder="Lista de Ingredientes">
+                @Model.ingredientes
+            </textarea>
+        </section>
+
+        <section class="update-recipe-input">
+            <label for="" class="update-recipe-label">
+                <span class="material-symbols-rounded">description</span>  
+                Descreva o modo de preparo
+            </label>
+            
+            <textarea name="modoPreparo" id="" cols="75" rows="15" placeholder="Modo de Preparo">
+                @Model.modoPreparo
+            </textarea>
+        </section>
+        
+        <section class="update-recipe-input">
+            <label for="" class="update-recipe-label">
+                <span class="material-symbols-rounded">image</span>       
+                Nome da foto da receita
+            </label>
+
+            <input type="text" name="imagem" placeholder="Nome da foto" class="input-input1" value="@Model.imagem">
+        </section>
+
+        @* <section class="update-recipe-input">
+            <label for="Categoria" class="update-recipe-label">
+                <span class="material-symbols-rounded">restaurant</span>      
+                Categoria
+            </label>
+
+            <select name="categoriaId" id="">
+                @if(Model != null)
+                {
+                    @foreach (Categoria categoria in Model)
+                    {
+                        <option value="@categoria.idCategoria">@categoria.nome</option>
+                    }
+                }
+            </select>
+        </section> *@
+
+        <button type="submit">Enviar</button>
+    </form>
+</main>

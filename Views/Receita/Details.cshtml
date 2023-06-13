@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="~/css/recipe-details.css">
+@model Receita;
+@{
+    ViewData["Title"] = $"Receita '{Model.nome}'";
+}
+
+<main>
+    <h1 class="recipe-h1">"@Model.nome"</h1>
+    <p class="recipe-dataPostagem">Criada em: @Model.dataPostagem</p>
+
+    <img src="~/img/Receita/@Model.imagem" alt="" srcset="">
+
+    <section class="ingredientes">
+        <h1>Ingredientes</h1>
+        <p class="recipe-ingredients">@Model.ingredientes</p>
+    </section>
+    
+    <section class="modoPreparo">
+        <h1>Modo de Preparo</h1>
+        <p class="recipe-modoPreparo">@Model.modoPreparo</p>
+    </section>
+</main>
