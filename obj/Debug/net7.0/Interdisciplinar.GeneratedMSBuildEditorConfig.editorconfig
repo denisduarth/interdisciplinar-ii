@@ -9,73 +9,75 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Interdisciplinar
 build_property.RootNamespace = Interdisciplinar
-build_property.ProjectDir = C:\COISAS DO DENIS\FATEC\INTER\Interdisciplinar\
+build_property.ProjectDir = c:\MINHAS COISAS SSD\C#\interdisciplinar-ii\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\COISAS DO DENIS\FATEC\INTER\Interdisciplinar
+build_property.MSBuildProjectDirectory = c:\MINHAS COISAS SSD\C#\interdisciplinar-ii
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/Categoria/Index.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/Categoria/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/Home/About.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/Home/Index.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/Login/Index.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/Receita/Create.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/Receita/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/Receita/Details.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/Receita/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/Receita/Index.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/Receita/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/Receita/Update.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/Receita/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YVxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/Shared/Error.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/Usuario/Create.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/Usuario/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/Usuario/Details.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/Usuario/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/Usuario/Update.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/Usuario/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/_ViewImports.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/_ViewStart.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/COISAS DO DENIS/FATEC/INTER/Interdisciplinar/Views/Shared/_Layout.cshtml]
+[c:/MINHAS COISAS SSD/C\#/interdisciplinar-ii/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-lqecrp9pge
